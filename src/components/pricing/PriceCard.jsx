@@ -3,21 +3,6 @@ import { Link } from 'react-router-dom';
 
 import 'assets/styles/pages/price-card.scss';
 
-const countries = [
-  {
-    value: 'france',
-    label: 'France',
-  },
-  {
-    value: 'germany',
-    label: 'Germany',
-  },
-  {
-    value: 'united kingdom',
-    label: 'United Kingdom',
-  },
-];
-
 export class PriceCard extends React.Component {
   constructor(props) {
     super(props)

@@ -37,7 +37,7 @@ export class AppHeader extends React.Component {
     menuItems[0][0].active = true;
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     menuItems[this.props.index][this.props.subindex].active = true;
   }
 

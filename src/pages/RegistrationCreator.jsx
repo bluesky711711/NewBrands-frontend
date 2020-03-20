@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { AppHeader, AppFooter, CustomItems } from "components";
 
@@ -78,26 +77,6 @@ class RegistrationCreator extends React.Component {
   }
 
   render() {
-
-    let materials = [];
-    for (let i = 0; i < 3; i++) {
-      materials.push(
-        <div className="list-items" key={i}>
-          <span className="list-mark"> {i + 1} </span>
-          <CustomItems method="WriteInput" text="" id={"list-item "+i} placeholder="Write here..." />
-        </div>
-      );
-    }
-
-    let process = [];
-    for (let i = 0; i < 2; i++) {
-      process.push(
-        <div className="list-items" key={i}>
-          <span className="list-mark"> {i + 1} </span>
-          <CustomItems method="WriteInput" text="" id={"list-item "+i+10} placeholder="Write here..." />
-        </div>
-      );
-    }
 
     return (
       <div className="registration-creator">

@@ -8,6 +8,10 @@ import Input from '@material-ui/core/Input';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
+import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+// If you want to use the provided css
+import 'react-google-places-autocomplete/dist/assets/index.css';
+
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -218,7 +222,7 @@ export class CustomItems extends React.Component {
         break;
 
       case "WriteInput":
-        item = <WriteInput className="content" label="" placeholder="" value={this.props.value} {...this.props} fullWidth />;
+        item = <WriteInput className="content" label="" placeholder="" value={this.props.value} onChange={this.onChange} onKeyPress={this.props.onKeyPress} {...this.props} fullWidth />;
         break;
 
       case "Select":
@@ -272,6 +276,30 @@ export class CustomItems extends React.Component {
         item = <ValidateButton variant="contained" color="primary" onClick={this.props.onClick} disableElevation> {this.props.label} </ValidateButton>;
         break;
 
+      case "GooglePlaces":
+        item = <GooglePlacesAutocomplete 
+                renderInput={(props) => (
+                  <div className="content">
+                    <input
+                      // Custom properties
+                      style={{
+                        boxShadow: 'none',
+                        fontFamily: 'Gelion',
+                        fontSize: '22px',
+                        lineHeight: '26px',
+                        color: '#333333',
+                        width: '100%',
+                        outline: 'none',
+                        padding: '0 20px 10px 20px',
+                        borderBottom: '1px solid #CCCCCC',
+                      }}
+                      {...props}
+                    />
+                  </div>
+                )}
+                onSelect={console.log} />
+        break;
+
       default:
         break;
     }
@@ -279,7 +307,7 @@ export class CustomItems extends React.Component {
     return (
       <div className="item-container">
         <div className="item">
-          <div className="type" style={(this.props.text === "") ? {display: 'none'} : {display: 'flex'}}>{this.props.text}</div>
+          <div className="type" style={(this.props.text === "" || this.props.title === "hidden") ? {display: 'none'} : {display: 'flex'}}>{this.props.text}</div>
           <div className="input">
             {/* <form validate autoComplete="off"> */}
               {item}
