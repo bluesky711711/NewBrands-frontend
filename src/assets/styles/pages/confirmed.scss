@@ -1,0 +1,36 @@
+@import 'assets/styles/variables';
+
+.confirmed {
+  display: flex;
+  flex-direction: column;
+  max-width: 1165px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .content {
+    font-weight: 500;
+    font-size: 91px;
+    line-height: 105px;
+    color: $dark;
+  }
+
+  .bottom-line {
+    margin-top: 91px;
+    // font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.7);
+
+    .midline {
+      font-weight: 100;
+      color: black;
+      text-decoration: line-through;
+    }
+
+    .bottom-text {
+      margin-left: 47px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import 'assets/styles/variables';
+
+$item-size: 400px;
+$item-row-margin: 75px;
+$banner-margin: 30px;
+
+.registration-partner {
+  background-color: $bg-white;
+
+  .page-container {
+    padding: 10px;
+    margin: 111px auto 50px auto;
+    padding-top: 115px;
+    display: flex;
+    flex-direction: column;
+
+    max-width: ($item-size + 2 * $item-row-margin) * 2 + 2 * $banner-margin;
+  }
+}

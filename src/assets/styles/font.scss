@@ -1,0 +1,420 @@
+/**
+Georgia font
+**/
+@font-face {
+    font-family: "Georgia";
+    src: url(../fonts/Georgia/georgia.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Georgia";
+    src: url(../fonts/Georgia/georgiai.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Georgia";
+    src: url(../fonts/Georgia/georgiaz.ttf) format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Georgia";
+    src: url(../fonts/Georgia/georgiab.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+/**
+Gelion font
+**/
+/* Thin */
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-Thin.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-ThinItalic.ttf) format("truetype");
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Light */
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-Light.ttf) format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-LightItalic.ttf) format("truetype");
+    font-weight: 200;
+    font-style: italic;
+}
+/* Medium */
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-Medium.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-MediumItalic.ttf) format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+/* Regular */
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-RegularItalic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+/* Semi Bold */
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-SemiBold.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-SemiBoldItalic.ttf) format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+/* Bold */
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-Bold.ttf) format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-BoldItalic.ttf) format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+/* Black */
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-Black.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gelion";
+    src: url(../fonts/Gelion/Gelion-BlackItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* georgia font */
+.font-georgia {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-style: normal;
+}
+.font-georgia-italic {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-style: italic;
+}
+.font-georgia-bold {
+    font-family: "Georgia";
+    font-weight: 600;
+    font-style: normal;
+}
+.font-georgia-bold-italic {
+    font-family: "Georgia";
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* gelion font */
+.font-gelion-thin {
+    font-family: "Gelion";
+    font-weight: 100;
+    font-style: normal;
+}
+.font-gelion-thin-italic {
+    font-family: "Gelion";
+    font-weight: 100;
+    font-style: italic;
+}
+.font-gelion-light {
+    font-family: "Gelion";
+    font-weight: 200;
+    font-style: normal;
+}
+.font-gelion-light-italic {
+    font-family: "Gelion";
+    font-weight: 200;
+    font-style: italic;
+}
+.font-gelion-medium {
+    font-family: "Gelion";
+    font-weight: 300;
+    font-style: normal;
+}
+.font-gelion-medium-italic {
+    font-family: "Gelion";
+    font-weight: 300;
+    font-style: italic;
+}
+.font-gelion {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-style: normal;
+}
+.font-gelion-italic {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-style: italic;
+}
+.font-gelion-semibold {
+    font-family: "Gelion";
+    font-weight: 500;
+    font-style: normal;
+}
+.font-gelion-semibold-italic {
+    font-family: "Gelion";
+    font-weight: 500;
+    font-style: italic;
+}
+.font-gelion-bold {
+    font-family: "Gelion";
+    font-weight: 600;
+    font-style: normal;
+}
+.font-gelion-bold-italic {
+    font-family: "Gelion";
+    font-weight: 600;
+    font-style: italic;
+}
+.font-gelion-black {
+    font-family: "Gelion";
+    font-weight: 700;
+    font-style: normal;
+}
+.font-gelion-black-italic {
+    font-family: "Gelion";
+    font-weight: 700;
+    font-style: italic;
+}
+
+.nb-h1 {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 66px;
+    line-height: normal;
+    color: #1c1c1c;
+}
+
+.black .nb-h1{
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 66px;
+    line-height: normal;
+    color: #ffffff;
+}
+
+.nb-h2-regular {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 36px;
+    line-height: normal;
+    color: #1c1c1c;
+}
+
+.black .nb-h2-regular {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 36px;
+    line-height: normal;
+    color: #1c1c1c;
+}
+
+.nb-h2-serif {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 47px;
+    line-height: normal;
+    color: #1c1c1c;
+}
+.nb-h3 {
+    line-height: normal;
+
+}
+.nb-h4 {
+    line-height: normal;
+
+}
+.nb-h5 {
+    font-family: "Georgia";
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #1c1c1c;
+}
+
+a.nb-link {
+    text-decoration: none;
+    font-family: "Gelion";
+    font-size: 16px;
+    font-weight: 400;
+    opacity: .4;
+    line-height: normal;
+    color: black;
+}
+a.nb-link:hover {
+    text-decoration: none;
+    opacity: .7;
+    line-height: normal;
+    color: black;
+}
+a.nb-link:active,
+a.nb-link.active {
+    opacity: 1;
+    line-height: normal;
+    color: black;
+}
+
+.black a.nb-link {
+    text-decoration: none;
+    font-family: "Gelion";
+    font-size: 16px;
+    font-weight: 400;
+    opacity: .8;
+    line-height: normal;
+    color: black;
+}
+.black a.nb-link:hover {
+    text-decoration: none;
+    opacity: .7;
+    line-height: normal;
+    color: black;
+}
+.black a.nb-link:active,
+.black a.nb-link.active {
+    opacity: 1;
+    line-height: normal;
+    color: black;
+}
+
+a.nb-link-2 {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 14px;
+    color: #1c1c1c;
+    line-height: normal;
+}
+a.nb-link-2:hover {
+    opacity: .7;
+}
+
+.black a.nb-link-2 {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 14px;
+    color: #f3f3f3;
+    line-height: normal;
+}
+
+a.nb-link-h3 {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 24px;
+    color: #1c1c1c;
+    line-height: normal;
+}
+a.nb-link-h3:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.nb-text-thin {
+    font-family: "Gelion";
+    font-weight: 100;
+    font-size: 16px;
+    color: black;
+    line-height: 22px;
+}
+.nb-text-2-op4 {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+    line-height: normal;
+    opacity: .4;
+}
+.black .nb-text-2-op4 {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 14px;
+    color: #f3f3f3;
+    line-height: normal;
+    opacity: 1.0;
+    background: #1c1c1c;
+}
+.nb-text-ui {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 14px;
+    color: #1c1c1c;
+    line-height: normal;
+}
+.black .nb-text-ui {
+    font-family: "Gelion";
+    font-weight: 400;
+    font-size: 14px;
+    color: #f3f3f3;
+    line-height: normal;
+}
+.nb-text-sign {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 11px;
+    color: black;
+    line-height: normal;
+}
+.nb-text-sign-op4 {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 11px;
+    color: black;
+    line-height: normal;
+    opacity: .4;
+}
+.detail-banner-1 {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.detail-banner-heading {
+    display: inline-block;
+    width: 450px;
+}
+.detail-banner-image {
+    display: inline-flex;
+    width: 100%;
+}
+.image-container img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}

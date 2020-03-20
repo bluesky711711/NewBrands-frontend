@@ -1,0 +1,87 @@
+@import 'assets/styles/variables';
+
+.price-card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: $bg-price-white;
+  border-radius: 10px;
+  color: $dark;
+  margin-bottom: 190px;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.03);
+
+  &>.title {
+    font-size: 44px;
+    line-height: 53px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin:  97px 303px 64px 303px;
+    color: $font-gray;
+  }
+
+  .values {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+
+    .price {
+      font-size: 88px;
+      line-height: 106px;
+      display: flex;
+      align-items: center;
+    }
+
+    .unit {
+      font-size: 36px;
+      line-height: 40px;
+      align-items: center;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  .payment {
+    max-width: 295px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $font-content-gray;
+    margin-bottom: 33px;
+    width: 100%;
+  }
+
+  .notation {
+    max-width: 297px;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 64px;
+    font-weight: 300;
+  }
+
+  .start-now {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $font-content-gray;
+    margin-bottom: 64px;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+    background-color: $bg-btn-gray;
+    padding: 10px 88px;
+  }
+
+  &.active,
+  &:hover {
+    box-shadow: 0px 1px 90px rgba(0, 0, 0, 0.1);
+
+    &>.title {
+      color: $dark;
+    }
+
+    .start-now {
+      color: #fafafa;
+      background: $font-dark;
+    }
+  }
+}
+

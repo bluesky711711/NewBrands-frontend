@@ -1,0 +1,147 @@
+@import 'variables';
+
+#footer {
+  width: 100%;
+  padding: 0 0 30px;
+  background-color: $bg-white;
+  color: #fff;
+
+  &.small {
+    footer {
+      width: 100%;
+
+      padding-top: 105px;
+      padding-left: 80px;
+      padding-right: 80px;
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .small-brands {
+        display: flex;
+        flex-direction: column;
+
+        .navbar-brand {
+          img {
+            width: 48px;
+          }
+        }
+
+        .mark-copy {
+          color: $font-dark;
+          width: 238px;
+          margin-top: 17px;
+
+          font-family: Gelion;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+
+      .mark {
+        margin-top: 0;
+        margin-bottom: 72px;
+      }
+    }
+  }
+
+  &.extend {
+    border-top: 2px solid $border-gray;
+
+    footer {
+      width: auto;
+
+      padding-top: 105px;
+      padding-left: 80px;
+      padding-right: 80px;
+
+      display: flex;
+      flex-direction: row;
+
+      .brands {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+
+        .navbar-brand {
+          margin-top: 23px;
+          img {
+            width: 192px;
+          }
+        }
+
+        .social-iconbar {
+          margin-top: 28px;
+
+          .icon {
+            margin-left: 0;
+            margin-right: 28px;
+          }
+        }
+
+        .mark-copy {
+          color: $font-dark;
+          width: 238px;
+          margin-top: 68px;
+
+          font-family: Gelion;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+
+      .menu {
+        font-family: Gelion;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 23px;
+
+        margin-top: 0;
+        margin-left: 209px;
+
+        display: flex;
+        flex-direction: row;
+
+        .menu-bar {
+          margin-top: 0;
+          padding-left: 0;
+          list-style: none;
+          width: 298px;
+
+          .submenu-title {
+            list-style: none;
+            color: $font-dark;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+          }
+
+          .menu-item {
+            list-style: none;
+            text-transform: none;
+            margin-bottom: 7px;
+
+            a {
+              color: $font-dark-submenu;
+            }
+          }
+        }
+      }
+
+      .mark {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    text-align: center;
+    padding: 25px 0 0;
+  }
+}
