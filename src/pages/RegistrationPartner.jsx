@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { AppHeader, AppFooter, CustomItems } from "components";
+import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete';
 
 import 'assets/styles/pages/registration-partner.scss';
 
@@ -46,6 +47,9 @@ class RegistrationPartner extends React.Component {
       materials_content: [""],
       process_count: 0,
       processes_content: [""],
+      address_count: 0,
+      addresses_info: [{address: {name: "", lat: undefined, lng: undefined}, info: ""}],
+      // addresses_info: [{address: {name: "Paris", lat: undefined, lng: undefined}, info: ""}],
     }
     this.selectCountry = this.selectCountry.bind(this);
     this.selectFindtype = this.selectFindtype.bind(this);
@@ -57,6 +61,8 @@ class RegistrationPartner extends React.Component {
     this.onChangeMeterial = this.onChangeMeterial.bind(this);
     this.onAddProcess = this.onAddProcess.bind(this);
     this.onChangeProcess = this.onChangeProcess.bind(this);
+    this.handleAddressInformation = this.handleAddressInformation.bind(this);
+    this.handleGoogleAddress = this.handleGoogleAddress.bind(this);
   }
   componentDidMount() {
 
@@ -149,7 +155,68 @@ class RegistrationPartner extends React.Component {
     }
   }
 
+  handleAddressInformation(e, index) {
+    let addresses_info = this.state.addresses_info;
+    addresses_info[index]["address"].info = e.target.value;
+    this.setState({ addresses_info });
+  }
+
+  handleGoogleAddress(e) {
+    let addresses_info = this.state.addresses_info;
+      let address_count = this.state.address_count;
+    let is_found = false;
+    for (let i = 0; i < address_count; i++) {
+      if (addresses_info[i].address.name === e.description) {
+        is_found = true;
+        break;
+      }
+    }
+    if (is_found === false) {
+      geocodeByAddress(e.description)
+        .then(results => getLatLng(results[0]))
+        .then(({ lat, lng }) => {
+          console.log('Successfully got latitude and longitude', { lat, lng })
+          let addr = {
+            address: {
+              name: e.description,
+              lat: lat,
+              lng: lng
+            },
+            info: "",
+          };
+          
+          addresses_info[address_count] = addr;
+          address_count = address_count + 1;
+          this.setState({
+            address_count,
+            addresses_info
+          });
+        });
+    }    
+  }
+
   render() {
+    // Make Address Information Component
+    let address = [];
+    for (let id = 0; id < this.state.address_count; id++) {
+      address.push(
+        <div className="inline" key={id}>
+          <div className="inline-container text">
+            <CustomItems method="MuiltiTextField" 
+              className="title"
+              title="hidden"
+              placeholder="Write informations here about this address"
+              onChange={event => this.handleAddressInformation(event, id)}
+            />
+          </div>
+          <div className="inline-container text">
+            <span className="header">{ this.state.addresses_info[id].address.name}</span>
+            <span className="body">{this.state.addresses_info[id].address.lat}, {this.state.addresses_info[id].address.lng}</span>
+          </div>
+        </div>
+      );
+    }
+
     // Make Material Component    
     let materials = [];
     for (let id = 0; id < this.state.material_count; id++) {
@@ -245,22 +312,16 @@ class RegistrationPartner extends React.Component {
               <CustomItems method="Input" text="№ of factories *" id="factory-number" value="2 usines recensé" required />
               <div className="inline">
                 <div className="inline-container"> <span className="title"> Please, enter their addresses </span> </div>
-                <CustomItems method="GooglePlaces" text="" title="hidden" id="inline-type-place" value="10 Place Vendôme, 75001 Paris" />
+                <CustomItems 
+                  method="GooglePlaces" 
+                  text="" 
+                  title="hidden" 
+                  id="inline-type-place" 
+                  value="10 Place Vendôme, 75001 Paris" 
+                  onSelect={this.handleGoogleAddress}
+                />
               </div>
-              <div className="inline">
-                <div className="inline-container text"> <span className="title"> This is where you’d like buyers to send payment for items you sell. It will only be displayed to winning bidders or buyers if you accept payment by mail. Learn more about providing a payment address. </span> </div>
-                <div className="inline-container text">
-                  <span className="header"><strong>10 Place Vendôme,</strong>75001 Paris, France.</span>
-                  <span className="body">48.866865, 2.330566</span>
-                </div>
-              </div>
-              <div className="inline">
-                <div className="inline-container text"> <span className="title"> This is where you’d like buyers to send payment for items you sell. It will only be displayed to winning bidders or buyers if you accept payment by mail. Learn more about providing a payment address. </span> </div>
-                <div className="inline-container text">
-                  <span className="header"><strong>10 Place Vendôme,</strong>75001 Paris, France.</span>
-                  <span className="body">48.866865, 2.330566</span>
-                </div>
-              </div>
+              { address }
               <div className="inline">
                 <div className="inline-container"> <span className="title"> Your industry  * </span> </div>
                 <CustomItems method="Input" text="" title="hidden" id="inline-type-manu" value="Manufacturing" required />

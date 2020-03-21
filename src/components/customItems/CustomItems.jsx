@@ -87,6 +87,44 @@ const GreyTextField = withStyles({
   },
 })(TextField);
 
+const MultiTextField = withStyles({
+  root: {
+    '& label.Mui-focused': {
+      color: 'grey',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'grey',
+    },
+    '& .MuiOutlinedInput-root': {
+      height: '100%',
+      '& MuiOutlinedInput-inputMultiline': {        
+        marginTop: 0,
+        marginBottom: 'auto',
+      },
+      '& fieldset': {
+        border: 'none',
+      },
+      '&:hover fieldset': {
+        border: 'none',
+      },
+      '&.Mui-focused fieldset': {
+        border: 'none',
+      },
+    },
+    '& > *': {
+      padding: '0',
+      fontFamily: 'Georgia',
+      fontStyle: 'normal',
+      fontWeight: 'normal',
+      fontSize: '14px',
+      lineHeight: '20px',
+      color: 'rgba(0, 0, 0, 0.7)',
+      width: "100%",
+      height: "100%",
+    },
+  },
+})(TextField);
+
 const useStyles = makeStyles({
   root: {
     fontFamily: 'Gelion',
@@ -132,7 +170,7 @@ const useStyles = makeStyles({
   },
 });
 
-// Inspired by blueprintjs
+// Styled Radio
 function StyledRadio(props) {
   const classes = useStyles();
 
@@ -297,7 +335,17 @@ export class CustomItems extends React.Component {
                     />
                   </div>
                 )}
-                onSelect={console.log} />
+                onSelect={this.props.onSelect} />
+        break;
+      
+      case "MuiltiTextField":
+        item = <MultiTextField
+                label=""
+                multiline
+                rows="2"
+                variant="outlined"
+                {...this.props}
+              />
         break;
 
       default:
