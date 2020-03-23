@@ -10,12 +10,12 @@ import 'assets/styles/header.scss';
 
 const menuItems = [
   [
-    { url: "#", text: "Home", active: false },
-    { url: "#", text: "Pricing", active: false }
+    { url: "/pricing-partners", text: "Home", active: false },
+    { url: "/pricing-creators", text: "Pricing", active: false }
   ],
   [
-    { url: "#", text: "Register my Brand", active: false },
-    { url: "#", text: "Contact us", active: false }
+    { url: "/pricing-creators", text: "Register my Brand", active: false },
+    { url: "/contact-us", text: "Contact us", active: false }
   ],
 ];
 
@@ -27,7 +27,6 @@ export class AppHeader extends React.Component {
       isExpandedMenu: false,
       isHomeExpanded: false,
       isManExpanded: false,
-      updateMenu: false,
     }
 
     this.handleMenuClick = this.handleMenuClick.bind(this);
@@ -38,7 +37,7 @@ export class AppHeader extends React.Component {
   }
 
   UNSAFE_componentWillMount() {
-    menuItems[this.props.index][this.props.subindex].active = true;
+    menuItems[0][0].active = true;
   }
 
   handleMenuClick(event, index, subindex) {
@@ -50,12 +49,8 @@ export class AppHeader extends React.Component {
 
     menuItems[index][subindex].active = true;
 
-    if ( index === 0 && subindex === 0) window.location.href = '/pricing-partners';
-    if ( index === 0 && subindex === 1) window.location.href = '/pricing-partners';
-    if ( index === 1 && subindex === 0) window.location.href = '/pricing-creators';
-
     this.setState( {
-      updateMenu: true
+      menuItems
     });
   }
 

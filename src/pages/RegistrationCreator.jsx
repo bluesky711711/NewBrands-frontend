@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppHeader, AppFooter, CustomItems } from "components";
+import { CustomItems } from "components";
 
 import 'assets/styles/pages/registration-creator.scss';
 
@@ -79,8 +79,7 @@ class RegistrationCreator extends React.Component {
   render() {
 
     return (
-      <div className="registration-creator">
-        <AppHeader type="white" index="1" subindex="0" />
+      <div className="registration-creator">        
         <div className="page-container">
           <span className="title-banner"> Let’s produce together your future sustainable collection? </span>
           <div className="registration-banner">
@@ -111,7 +110,6 @@ class RegistrationCreator extends React.Component {
             <CustomItems method="Button" label="VALIDATE" id="validate" onClick={this.onValidate} required />
           </div>
         </div>
-        <AppFooter type="small" />
       </div>
     );
   }

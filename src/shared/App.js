@@ -8,6 +8,7 @@ import {
   RegistrationPartner,
   RegistrationConfirmed,
   RegistrationCreator,
+  ContactUs,
 }  from 'pages';
 
 import 'assets/styles/app.scss';
@@ -32,6 +33,7 @@ class App extends React.Component {
             <Route exact path="/registration-partner" component={RegistrationPartner} />
             <Route exact path="/registration-confirmed" component={RegistrationConfirmed} />
             <Route exact path="/registration-creator" component={RegistrationCreator} />
+            <Route exact path="/Contact-Us" component={ContactUs} />
 
           </Suspense>
         </FrontendLayout>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppHeader, AppFooter, CustomItems } from "components";
+import { CustomItems } from "components";
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete';
 
 import 'assets/styles/pages/registration-partner.scss';
@@ -284,8 +284,7 @@ class RegistrationPartner extends React.Component {
     );
 
     return (
-      <div className="registration-partner">
-        <AppHeader type="white" index="0" subindex="0" />
+      <div className="registration-partner">        
         <div className="page-container">
           <span className="title-banner"> Let’s change the process for a brand new industry! </span>
           <div className="registration-banner">
@@ -360,7 +359,6 @@ class RegistrationPartner extends React.Component {
             <CustomItems method="Button" label="VALIDATE" id="validate" onClick={this.onValidate} required />
           </div>
         </div>
-        <AppFooter type="small" />
       </div>
     );
   }

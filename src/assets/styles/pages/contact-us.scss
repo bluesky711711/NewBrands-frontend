@@ -1,0 +1,17 @@
+@import 'assets/styles/variables';
+
+.contact-us {
+  background-color: $bg-pg-gray;
+
+  .page-container {
+    padding: 10px;
+    margin: 112px 80px 80px 80px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      margin-top: 20px;
+    }
+  }
+}

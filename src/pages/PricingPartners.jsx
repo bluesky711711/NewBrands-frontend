@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { AppHeader, AppFooter, PriceCard } from "components";
+import { PriceCard } from "components";
 
 import 'assets/styles/pages/pricing-partners.scss';
 
@@ -73,7 +73,6 @@ class PricingPartners extends React.Component {
 
     return (
       <div className="pricing-partners">
-        <AppHeader type="black" index="0" subindex="0" />
         <div className="page-container">
           <div className="pricing-banner">
             <span className="title"> Pricing </span>
@@ -114,7 +113,6 @@ class PricingPartners extends React.Component {
             </div>
           </div>
         </div>
-        <AppFooter type="extend" />
       </div>
     );
   }
