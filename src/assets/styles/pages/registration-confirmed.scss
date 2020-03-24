@@ -4,16 +4,44 @@ $item-size: 400px;
 $item-row-margin: 75px;
 $banner-margin: 30px;
 
-.registration-partner {
+.registration-confirmed {
   background-color: $bg-white;
 
+  font-size: 1.25rem ;
+  font-style: normal;
+  font-weight: normal;
+    
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
   .page-container {
-    padding: 10px;
-    margin: 111px auto 50px auto;
-    padding-top: 115px;
+    padding: 5.2282em 3.6363em 3.6363em 3.6363em;
+    margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
 
     max-width: ($item-size + 2 * $item-row-margin) * 2 + 2 * $banner-margin;
+  }
+}
+
+@media (max-width: 992px) {
+  .registration-confirmed {   
+    font-size: 1rem; 
+    .page-container {      
+      padding-left: 3em; 
+      padding-right: 3em; 
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .registration-confirmed {
+    font-size: 0.8rem;    
   }
 }

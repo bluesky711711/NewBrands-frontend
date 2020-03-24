@@ -3,25 +3,25 @@
 .confirmed {
   display: flex;
   flex-direction: column;
-  max-width: 1165px;
   margin-left: auto;
   margin-right: auto;
+  
+  max-width: 58.25em;
 
   .content {
+    font-size: 4.55em;
     font-weight: 500;
-    font-size: 91px;
-    line-height: 105px;
+    line-height: 1.1538em;
     color: $dark;
   }
 
   .bottom-line {
-    margin-top: 91px;
-    // font-family: 'Roboto';
+    font-size: 1.375em;
     font-style: normal;
     font-weight: 200;
-    font-size: 22px;
-    line-height: 30px;
-    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.3636em;    
+    color: rgba(0, 0, 0, 0.7);    
+    margin-top: 4.1363em;
 
     .midline {
       font-weight: 100;
@@ -30,7 +30,31 @@
     }
 
     .bottom-text {
-      margin-left: 47px;
+      margin-left: 2.1363em;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .confirmed {   
+    .content {
+      font-size: 3.5em;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .confirmed {   
+    .content {
+      font-size: 3em;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .confirmed {   
+    .content {
+      font-size: 3em;
     }
   }
 }

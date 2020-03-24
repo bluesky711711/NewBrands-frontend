@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AppHeader, AppFooter, Confirmed } from "components";
+import { Confirmed } from "components";
 
 import 'assets/styles/pages/registration-confirmed.scss';
 
@@ -18,12 +18,10 @@ class RegistrationConfirmed extends React.Component {
   render() {
 
     return (
-      <div className="registration-partner">
-        <AppHeader type="white" index="0" subindex="0"/>
+      <div className="registration-confirmed">
         <div className="page-container">
           <Confirmed label={confirmed_text} />
         </div>
-        <AppFooter type="small" />
       </div>
     );
   }
