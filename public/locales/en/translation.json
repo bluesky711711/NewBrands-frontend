@@ -186,5 +186,10 @@
      "AgreeLabel": "I agree to receive occasional newsletters containing news and advice on creating personal and business progress to becoming sustainable and ethics.",
      "Notation": "By validating, you accept the <strong>Terms of Service</strong> of NewBrands.fr and confirm that you have consulted our <strong>Special Conditions</strong> and <strong>General Conditions of Services</strong>, our <strong>Privacy Policy</strong> as well as our <strong>Cookies Notice</strong>.",
      "Validation": "Validation"
+  },
+
+  "Confirmed": {
+    "Message": "We have received your request, you will receive an email in a few moments to finalize your registration.",
+    "From": "The New / Brands team."
   }
 }

@@ -1,10 +1,9 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
 import { Confirmed } from "components";
 
 import 'assets/styles/pages/registration-confirmed.scss';
-
-const confirmed_text = "Nous avons bien reçus votre demande, vous recevrez un email dans quelques instants afin de finalisé votre inscription.";
 
 class RegistrationConfirmed extends React.Component {
   constructor(props) {
@@ -16,15 +15,15 @@ class RegistrationConfirmed extends React.Component {
   }
 
   render() {
-
+    const { t } = this.props;
     return (
       <div className="registration-confirmed">
         <div className="page-container">
-          <Confirmed label={confirmed_text} />
+          <Confirmed label={t("Confirmed.Message")} from={t("Confirmed.From")}/>
         </div>
       </div>
     );
   }
 }
 
-export default RegistrationConfirmed;
+export default withTranslation()(RegistrationConfirmed);

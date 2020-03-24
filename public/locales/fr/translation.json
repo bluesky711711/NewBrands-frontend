@@ -186,5 +186,9 @@
     "AgreeLabel": "J'accepte de recevoir des newsletters occasionnelles contenant des nouvelles et des conseils sur la création de progrès personnels et commerciaux pour devenir durable et éthique.",
     "Notation": "En validant, vous acceptez les <strong>Conditions Générales d’Utilisation</strong> de NewBrands.fr ainsi vous confirmer avoir consulté nos <strong>Conditions Particulières</strong> et <strong>Conditions Générales de Services</strong>, notre <strong>Politique de Confidentialité</strong> ainsi que notre <strong>Notice Cookies.</strong>",
     "Validation": "Validation"
- }
+ },
+ "Confirmed": {
+    "Message": "Nous avons bien reçus votre demande, vous recevrez un email dans quelques instants afin de finalisé votre inscription.",
+    "From": "L’équipe New/Brands."
+  }
 }
