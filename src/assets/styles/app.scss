@@ -11,14 +11,29 @@
 	overflow-x: hidden;
 }
 
+/* Document level adjustments */
+html {
+  font-size: 16px;
+  font-family: 'Gelion';
+}
+h1 {
+  margin-top: 0;
+}
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+
 body {
   margin: 0;
-	padding: 0;
+	padding: 11.3rem 0 0 0;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background-color: $bg-pg-gray;
 	font-family: "Gelion";
-	font-size: .9rem;
+	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
 }
@@ -33,7 +48,7 @@ body {
 a {
 	text-decoration: none;
 	color: $dark;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 400;
 	line-height: normal;
 }
@@ -60,30 +75,6 @@ a {
 		padding-left: 0;
 		padding-right: 0;
 	}
-}
-
-.App main {
-  @media (min-width: 1200px) {
-    margin-top: 90px;
-  }
-  @media (max-width: 1200px) {
-    margin-top: 132px;
-  }
-  @media (max-width: 767px) {
-    margin-top: 0;
-  }
-}
-
-section {
-	width: 100%;
-}
-
-.form-group input[type='radio'] {
-	border-radius: 50% !important;
-	height: 18px !important;
-	width: 18px !important;
-	padding: 0px !important;
-	margin-right: 4px !important;
 }
 
 ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover {

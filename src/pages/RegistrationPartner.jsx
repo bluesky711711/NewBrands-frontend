@@ -3,7 +3,7 @@ import React from 'react';
 import { CustomItems } from "components";
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete';
 
-import 'assets/styles/pages/registration-partner.scss';
+import 'assets/styles/pages/registration.scss';
 
 const countries = [
   {
@@ -38,18 +38,32 @@ class RegistrationPartner extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      fullname: 'John Doe',
+      brandname: 'NEWBRANDS',
       country: countries[0].value,
-      findType: find_types[0].value,
+      email: 'j.bigot@newbrands.fr',
+      email_verified: true,
       phoneNumber: '+(33)700000000',
+      phone_verified: false,
+      findType: find_types[0].value,
+      duns_number: 134954,
+      company_date: '1996',
+      company_type: 'Limited Company',
       software: softwares[0].value,
-      agreed: false,
+      min_production: '> 20',
+      basic_technical: 'Only one!',
+      company_size: '0 - 20',
+      facory_number: '2 usines recensé',
+      your_industry: 'Manufacturing',
+      your_knowhow: 'Mens Garments [knitted]',
       material_count: 0,
       materials_content: [""],
       process_count: 0,
       processes_content: [""],
       address_count: 0,
       addresses_info: [{address: {name: "", lat: undefined, lng: undefined}, info: ""}],
-      // addresses_info: [{address: {name: "Paris", lat: undefined, lng: undefined}, info: ""}],
+      agreed: false,
+      
     }
     this.selectCountry = this.selectCountry.bind(this);
     this.selectFindtype = this.selectFindtype.bind(this);
@@ -240,9 +254,10 @@ class RegistrationPartner extends React.Component {
         <span className="list-mark"> {this.state.material_count + 1} </span>
         <CustomItems 
           method="WriteInput" 
+          id={"list-item "+this.state.material_count} 
           text="" 
           title="hidden" 
-          id={"list-item "+this.state.material_count} 
+          rowtype="true"
           placeholder="Write here..."
           value={this.state.materials_content[this.state.material_count]}
           onChange={e => this.onChangeMeterial(e, this.state.material_count)}
@@ -276,6 +291,7 @@ class RegistrationPartner extends React.Component {
           text=""
           title="hidden"
           id={"list-item "+this.state.process_count+this.state.material_count+1}
+          rowtype="true"
           placeholder="Write here..." 
           value={this.state.processes_content[this.state.process_count]}
           onChange={e => this.onChangeProcess(e, this.state.process_count)}
@@ -289,46 +305,36 @@ class RegistrationPartner extends React.Component {
           <span className="title-banner"> Let’s change the process for a brand new industry! </span>
           <div className="registration-banner">
             <div className="options">
-              <CustomItems method="Input" text="Full name *" id="full-name" value="John Doe" required />
-              <CustomItems method="Input" text="Brand name *" id="brand-name" value="NEWBRANDS" required />
+              <CustomItems method="Input" text="Full name *" id="full-name" value={this.state.fullname} required />
+              <CustomItems method="Input" text="Brand name *" id="brand-name" value={this.state.brandname} required />
               <CustomItems method="Select" text="Country *" id="country" options={countries} value={this.state.country} onChange={this.selectCountry} required />
-              <CustomItems method="Input" text="E-Mail *" id="email" type="email" value="j.bigot@newbrands.fr" required />
-              <div className="inline">
-                <div className="inline-container"> <span className="title"> How did you find out about us? </span> </div>
-                <CustomItems method="Select" text="" title="hidden" id="inline-type-find" options={find_types} value={this.state.findType} onChange={this.selectFindtype} />
-              </div>
-              <CustomItems method="PhoneNumber" text="Phone № *" id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} required />
-              <CustomItems method="Input" text="DUNS № (if company created)" id="duns" value="134954" type="number" />
-              <CustomItems method="Input" text="Company founded in  *" id="company-date" value="1996" type="number" required />
-              <CustomItems method="Input" text="Type of company *" id="company-type" value="Limited Company" required />
-              <div className="inline">
-                <div className="inline-container"> <span className="title"> Software of production using  *</span> </div>
-                <CustomItems method="Select" text="" title="hidden" id="inline-type-software" options={softwares} value={this.state.software} onChange={this.selectSoftware} required />
-              </div>
-              <CustomItems method="Input" text="Minimum production quantity *" id="production" value="20" required />
-              <CustomItems method="Input" text="Basic Technical Templates *" id="template" value="Only one!" required />
-              <CustomItems method="Input" text="Company size *" id="company-size" value="0 - 20" required />
-              <CustomItems method="Input" text="№ of factories *" id="factory-number" value="2 usines recensé" required />
-              <div className="inline">
-                <div className="inline-container"> <span className="title"> Please, enter their addresses </span> </div>
-                <CustomItems 
-                  method="GooglePlaces" 
-                  text="" 
-                  title="hidden" 
-                  id="inline-type-place" 
-                  value="10 Place Vendôme, 75001 Paris" 
-                  onSelect={this.handleGoogleAddress}
-                />
-              </div>
+              <CustomItems method="Email" text="E-Mail *" id="email" type="email" value={this.state.email} verified={this.state.email_verified} required />
+              <CustomItems method="Label" text="" title="hidden" id="type-find-label" label="How did you find out about us?" />
+              <CustomItems method="Select" text="" title="hidden" id="type-find" options={find_types} value={this.state.findType} onChange={this.selectFindtype} />
+              <CustomItems method="PhoneNumber" text="Phone № *" id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} verified={this.state.phone_verified} required />
+              <CustomItems method="Input" text="DUNS № (if company created)" id="duns" value={this.state.duns_number} type="number" />
+              <CustomItems method="Input" text="Company founded in  *" id="company-date" value={this.state.company_date} type="number" required />
+              <CustomItems method="Input" text="Type of company *" id="company-type" value={this.state.company_type} required />
+              <CustomItems method="Label" text="" title="hidden" id="type-software-label" label="Software of production using  *" />
+              <CustomItems method="Select" text="" title="hidden" id="type-software" options={softwares} value={this.state.software} onChange={this.selectSoftware} required />
+              <CustomItems method="Input" text="Minimum production quantity *" id="production" value={this.state.min_production} required />
+              <CustomItems method="Input" text="Basic Technical Templates *" id="template" value={this.state.basic_technical} required />
+              <CustomItems method="Input" text="Company size *" id="company-size" value={this.state.company_size} required />
+              <CustomItems method="Input" text="№ of factories *" id="factory-number" value={this.state.facory_number} required />
+              <CustomItems method="Label" text="" title="hidden" id="address-lable" label="Please, enter their addresses" />
+              <CustomItems 
+                method="GooglePlaces" 
+                text="" 
+                title="hidden" 
+                id="inline-type-place" 
+                value="10 Place Vendôme, 75001 Paris" 
+                onSelect={this.handleGoogleAddress}
+              />
               { address }
-              <div className="inline">
-                <div className="inline-container"> <span className="title"> Your industry  * </span> </div>
-                <CustomItems method="Input" text="" title="hidden" id="inline-type-manu" value="Manufacturing" required />
-              </div>
-              <div className="inline">
-                <div className="inline-container"> <span className="title"> Your Know-how  * </span> </div>
-                <CustomItems method="Input" text="" title="hidden" id="inline-type-men" value="Mens Garments [knitted]" required />
-              </div>
+              <CustomItems method="Label" text="" title="hidden" id="address-lable" label="Your industry  *" />
+              <CustomItems method="Input" text="" title="hidden" id="inline-industry" value={this.state.your_industry} required />
+              <CustomItems method="Label" text="" title="hidden" id="address-lable" label="Your Know-how  *" />
+              <CustomItems method="Input" text="" title="hidden" id="inline-know-how" value={this.state.your_knowhow} required />
               <div className="inline list">
                 <div className="inline-container"> <span className="title"> Materials with which you are working ? </span> </div>
                 <div className="inline-list">
@@ -352,7 +358,8 @@ class RegistrationPartner extends React.Component {
           <div className="agree-banner">
             {/* <CustomItems method="Option" text="" id="agree" value={this.agreed ? "agree" : ""} onChange={this.selectAgree} */}
             <CustomItems method="Option" text="" title="hidden" id="agree" value={""} onChange={this.selectAgree}
-                label="I agree to receive occasional newsletters containing news and advice on creating personal and business progress to becoming sustainable and ethics." />
+              label="I agree to receive occasional newsletters containing news and advice on creating personal and business progress to becoming sustainable and ethics." 
+              rowtype="true"/>
           </div>
           <div className="validate-banner">
             <span>En validant, vous acceptez les <strong>Conditions Générales d’Utilisation</strong> de NewBrands.fr ainsi vous confirmer avoir consulté nos <strong>Conditions Particulières</strong> et <strong>Conditions Générales de Services</strong>, notre <strong>Politique de Confidentialité</strong> ainsi que notre <strong>Notice Cookies.</strong></span>

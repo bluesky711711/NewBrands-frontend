@@ -1,49 +1,65 @@
 @import 'assets/styles/variables';
 
-$item-size: 400px;
-$item-row-margin: 75px;
-$banner-margin: 30px;
+$base-font-rate: 1.25;
+$item-size: 14.54544em * $base-font-rate;
+$item-row-margin: 3.75em * $base-font-rate;
+$banner-margin: 1.5em * $base-font-rate;
+$page-margin: 2em * $base-font-rate;
+$page-max-width: 2 * (($item-size + 2 * $item-row-margin) + $banner-margin + $page-margin) + 0.25em;
 
-.registration-creator {
+.registration-creator,
+.registration-partner {
   background-color: $bg-white;
 
+  font-size: $base-font-rate * 1rem ;
+  font-style: normal;
+  font-weight: normal;
+    
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
   .page-container {
-    padding: 10px;
-    margin: 111px auto 100px auto;
-    padding-top: 115px;
+    padding: 1.75em $page-margin 5em $page-margin;
+    margin: 0 auto 0 auto;
     display: flex;
     flex-direction: column;
 
-    max-width: ($item-size + 2 * $item-row-margin) * 2 + 2 * $banner-margin;
+    max-width: $page-max-width;
 
     .title-banner {
       display: flex;
-      font-family: Gelion;
+      font-size: 4.55em;
+      font-family: 'Gelion';
       font-style: normal;
       font-weight: 500;
-      font-size: 91px;
-      line-height: 105px;
+      line-height: 1.154em;
       color: $dark;
-      margin-bottom: 160px;
+      margin-bottom: 1.7582em;
     }
 
     .registration-banner {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      flex-wrap: wrap;
+      max-width: 100%;
       margin: 0 $banner-margin;
 
       .options {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
 
         .item-container {
           display: flex;
           flex-direction: column;
           width: 50%;
-          margin-bottom: 65px;
+          margin-bottom: 3.25em;
 
           .item {
             display: flex;
@@ -52,29 +68,32 @@ $banner-margin: 30px;
             margin-right: auto;
 
             .type {
+              font-size: 1em;
               font-weight: 200;
-              font-size: 20px;
-              line-height: 24px;
+              line-height: 1.2em;
               color: $font-content-gray;
-              margin-bottom: 25px;
+              margin-bottom: 1.25em;
             }
 
             .input {
               display: flex;
               flex-direction: column;
               flex-wrap: wrap;
-              font-size: 22px;
-              line-height: 26px;
+              font-size: 1.1em;
+              line-height: 1.1818em;
               color: $dark;
 
               .content {
                 width: $item-size;
+                // width: 100%;
                 margin-left: 0;
                 margin-right: 0;
+                font-family: 'Gelion';
+                font-size: 1em;
 
                 &.text {
-                  font-size: 14px;
-                  line-height: 20px;
+                  font-size: 0.7em;
+                  line-height: 1.4286em;
                   color: rgba(0, 0, 0, 0.7);
                 }
               }
@@ -82,14 +101,14 @@ $banner-margin: 30px;
               .inner {
                 display: inline-block;
                 flex-direction: column;
-                min-width: $item-size;
+                width: $item-size;
 
                 .verification {
-                  font-size: 13px;
-                  line-height: 16px;
+                  font-size: 0.65em;
+                  line-height: 1.2308em;
                   float: right;
                   color: $font-content-gray;
-                  margin-top: 7px;
+                  margin-top: 0.5385em;
 
                   .mark {
                     display: none;
@@ -112,8 +131,8 @@ $banner-margin: 30px;
           display: flex;
           flex-direction: row;
           width: 100%;
-          margin-top: 5px;
-          margin-bottom: 54px;
+          margin-top: 0.25em;
+          margin-bottom: 2.7em;
 
           .inline-container {
             display: flex;
@@ -121,8 +140,8 @@ $banner-margin: 30px;
             width: 50%;
 
             .title {
-              font-size: 22px;
-              line-height: 26px;
+              font-size: 1.1em;
+              line-height: 1.1818em;
               color: $font-dark;
               width: $item-size;
               margin-left: auto;
@@ -132,24 +151,28 @@ $banner-margin: 30px;
             &.text {
 
               .title {
-                font-size: 14px;
-                line-height: 20px;
+                font-family: 'Georgia';
+                font-size: 0.7em;
+                line-height: 1em;
                 color: #000000b3;
                 max-width: $item-size;
               }
               .header {
                 font-weight: 500;
-                font-size: 22px;
-                line-height: 26px;
+                font-size: 1.1em;
+                line-height: 1.4286em;
                 color: $font-dark;
                 max-width: $item-size;
                 margin-right: auto;
                 margin-left: $item-row-margin + $banner-margin / 2;
+                strong {
+                  font-weight: 300;
+                }
               }
               .body {
-                font-weight: 500;
-                font-size: 20px;
-                line-height: 40px;
+                font-weight: 300;
+                font-size: 0.9em;
+                line-height: 2.2222em;
                 color: black;
                 opacity: 0.5;
                 max-width: $item-size;
@@ -175,8 +198,8 @@ $banner-margin: 30px;
               }
 
               .input {
-                font-size: 22px;
-                line-height: 26px;
+                font-size: 1.1em;
+                line-height: 1.1818em;
                 color: $dark;
 
                 .content {
@@ -200,16 +223,16 @@ $banner-margin: 30px;
               flex-wrap: wrap;
               margin-left: auto;
               margin-right: auto;
-              margin-top: 55px;
-              margin-bottom: 26px;
+              margin-top: 2.75em;
+              margin-bottom: 1.3em;
 
               width: 2 *$item-size + 2 * $item-row-margin + $banner-margin / 2;
 
               .list-items {
                 display: flex;
                 flex-direction: row;
-                margin-left: 50px;
-                margin-bottom: 84px;
+                margin-left: 2.5em;
+                margin-bottom: 4.2em;
                 width: 100%;
 
                 &:last-child {
@@ -227,10 +250,10 @@ $banner-margin: 30px;
 
                 .list-mark {
                   font-weight: 900;
-                  font-size: 15px;
-                  line-height: 0px;
-                  margin-top: 15px;
-                  margin-right: 10px;
+                  font-size: 0.75em;
+                  line-height: 0;
+                  margin-top: 1em;
+                  margin-right: 0.6667em;
                 }
 
                 .content {
@@ -244,17 +267,17 @@ $banner-margin: 30px;
           &.bottom {
             .title {
               font-weight: 300;
-              font-size: 20px;
-              line-height: 20px;
+              font-size: 1em;
+              line-height: 1em;
               color: #000000;
               opacity: 0.4;
             }
             .inline-text {
               margin-left: $item-row-margin + $banner-margin;
               margin-right: $item-row-margin + $banner-margin / 2;
-              margin-top: 25px;
-              font-size: 22px;
-              line-height: 26px;
+              margin-top: 1.25em;
+              font-size: 1.1em;
+              line-height: 1.3em;
               color: black;
             }
           }
@@ -264,15 +287,15 @@ $banner-margin: 30px;
     .agree-banner {
       display: flex;
       justify-content: center;
-      width: 100%;
+      max-width: 38.2em;
+      font-size: 1em;
       font-weight: 300;
-      font-size: 16px;
-      line-height: 23px;
+      line-height: 1.4375em;
       color: rgba(0, 0, 0, 0.83);
-      margin-top: 100px;
+      margin-top: 6.25em;
 
       .item-container {
-        max-width: 750px;
+        max-width: 46.875em;
         margin-left: 0;
         margin-right: auto;
       }
@@ -283,11 +306,11 @@ $banner-margin: 30px;
       flex-direction: column;
       justify-content: center;
       width: 100%;
+      font-size: 1.1em;
       font-weight: 200;
-      font-size: 22px;
-      line-height: 30px;
+      line-height: 1.3636em;
       color: rgba(0, 0, 0, 0.7);
-      margin-top: 92px;
+      margin-top: 4.1818em;
 
       strong {
         font-weight: 300;
@@ -295,8 +318,141 @@ $banner-margin: 30px;
       }
 
       .item-container {
-        margin-top: 69px;
+        margin-top: 3.1363em;
       }
+    }
+  }
+}
+
+.registration-partner {
+  .page-container {
+    .registration-banner {
+      .options {
+        .inline {
+          .inline-container {
+            &.text {
+              .item-container {
+                width: 100%;
+                height: 100%;
+
+                .item {
+                  height: 100%;
+
+                  .input {
+                    height: 100%;
+                  }
+                }              
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1110px) {
+  .registration-creator,
+  .registration-partner {  
+    font-size: 1rem;
+    .page-container {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .registration-banner {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .registration-creator,
+  .registration-partner {    
+    .page-container {
+      .title-banner {
+        font-size: 3.5em;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .registration-creator,
+  .registration-partner {
+    .page-container {
+      font-size: 1rem;
+      max-width: none;
+      margin-left: auto;
+      margin-right: auto;
+
+      .title-banner {
+        font-size: 2.5em;
+      }
+
+      .registration-banner {
+        margin-left: auto;
+        margin-right: auto;
+          
+        .options {
+          flex-direction: column !important;
+          flex-wrap: wrap;
+          width: 100%;
+          
+          .item-container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+          }
+
+          .inline {
+            &.list {
+              width: 100%;
+              .inline-list {
+                width: 100%;
+                .list-items {
+                  .item-container {
+                    .item {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+
+              &.bottom {
+                .inline-text {
+                  margin-left: 0;
+                  margin-right: 0;
+                }
+              }
+            }
+          }          
+        }
+      }
+
+      .agree-banner {
+        margin-top: 3.25em;
+      }
+
+      .validate-banner {
+        .item-container {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  .registration-creator,
+  .registration-partner {
+    .page-container {     
+      .title-banner {
+        font-size: 2em;
+      }     
     }
   }
 }

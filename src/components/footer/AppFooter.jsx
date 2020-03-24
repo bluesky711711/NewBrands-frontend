@@ -40,8 +40,8 @@ const menuItems = [
 export const AppFooter = props => {
   if (props.type === "small") {
     return (
-      <div id="footer" className="footer-container small" style={{ width: '100%', backgroundColor: "bg-white" }}>
-        <footer className="page-container-responsive m-0">
+      <div className="footer small">
+        <div className="footer-container">
           <div className="small-brands">
             <div className="navbar-brand"> <img src={small_logo} alt="New Brands Logo"/> </div>
             <div className="mark-copy">
@@ -50,7 +50,7 @@ export const AppFooter = props => {
             </div>
           </div>
           <div className="mark"> <img src={logo_img} alt="New Brands Mark"/> </div>
-        </footer>
+        </div>
       </div>
     );
   } else {
@@ -73,7 +73,7 @@ export const AppFooter = props => {
       });
 
       return (
-        <ul className="menu-bar" key={index}>
+        <ul className="col-md-4 menu-bar" key={index}>
           <li className="submenu-title" key={0}> {menuitem.text} </li>
           {submenubar}
         </ul>
@@ -82,19 +82,18 @@ export const AppFooter = props => {
     });
 
     return (
-      <div id="footer" className="footer-container extend" style={{ width: '100%', backgroundColor: "bg-white" }}>
-        <footer className="page-container-responsive m-0">
+      <div className="footer extend">
+        <div className="footer-container">
           <div className="brands">
             <div className="navbar-brand"> <img src={logo_white} alt="New Brands Logo"/> </div>
             { socialIconbar }
             <div className="mark-copy">
-              © Copyright 2017-2020, NewBrands.fr, SAS
-              et its partners
+              © Copyright 2017-2020, NewBrands.fr, SAS et its partners
             </div>
           </div>
-          <div className="menu"> { menubar } </div>
-          <div className="mark"> <img src={logo_img} width="120px" alt="New Brands Mark"/> </div>
-        </footer>
+          <div className="col-xl-6 col-lg-7 col-md-7 menu"> { menubar } </div>
+          <div className="col-xl-3 col-lg-1 col-md-1 mark"> <img src={logo_img} alt="New Brands Mark"/> </div>
+        </div>
       </div>
     );
   }

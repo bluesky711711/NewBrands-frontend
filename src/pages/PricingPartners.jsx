@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { PriceCard } from "components";
 
-import 'assets/styles/pages/pricing-partners.scss';
+import 'assets/styles/pages/pricing.scss';
 
 const contentList = {
   title: {
@@ -105,8 +105,8 @@ class PricingPartners extends React.Component {
             </div>
           </div>
           <div className="contact-banner">
-            <div className="col-6 question"> Keep having question ? </div>
-            <div className="col-6 informaion">
+            <div className="col-xl-6 col-5 question"> Keep having question ? </div>
+            <div className="col-xl-6 col-7 informaion">
               <span className="times"> Mon -- Fri     /     9:30am -- 5:30pm </span>
               <br/>
               <span className="email"> hello@newbrands.fr     /     +(33) 01 00 00 00 00 </span>

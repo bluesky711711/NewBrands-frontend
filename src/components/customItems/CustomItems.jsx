@@ -1,33 +1,30 @@
 import React from 'react';
-import clsx from 'clsx';
 
-import { withStyles, makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Input from '@material-ui/core/Input';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Button from '@material-ui/core/Button';
+import Checkbox from '@material-ui/core/Checkbox';
+import CircleCheckedFilled from '@material-ui/icons/CheckCircle';
+import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
+
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
-// If you want to use the provided css
 import 'react-google-places-autocomplete/dist/assets/index.css';
 
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import Button from '@material-ui/core/Button';
-
-import 'assets/styles/pages/registration-partner.scss';
+import 'assets/styles/pages/registration.scss';
 
 const GreyInput = withStyles({
-  root: {
-    fontFamily: 'Gelion',
-    '& > *': {
-      padding: '0 10px 10px 15px',
-      fontSize: '22px',
-      lineHeight: '26px',
-    },
+  input: {
+    fontFamily: 'Gelion',  
+    padding: '0 0.5em 0.4545em 0.6818em',
+    fontSize: '1em',
+    lineHeight: '1.1818em',
+    width: '100%',
   },
   underline: {
     '&:after': {
@@ -43,10 +40,10 @@ const WriteInput = withStyles({
   root: {
     fontFamily: 'Gelion',
     '& > *': {
-      padding: '0 10px 10px 15px',
-      fontSize: '22px',
+      padding: '0 0.4545em 0.4545em 0.6818em',
+      fontSize: '1em',
       fontFamily: 'Gelion',
-      lineHeight: '26px',
+      lineHeight: '1.1818em',
     },
   },
   underline: {
@@ -60,8 +57,7 @@ const WriteInput = withStyles({
 })(Input);
 
 const GreyTextField = withStyles({
-  root: {
-    fontFamily: 'Gelion',
+  root: {    
     '& label.Mui-focused': {
       color: 'grey',
     },
@@ -80,9 +76,10 @@ const GreyTextField = withStyles({
       },
     },
     '& > *': {
-      padding: '0 10px 10px 15px',
-      fontSize: '22px',
-      lineHeight: '26px',
+      fontFamily: 'Gelion',
+      padding: '0 0.4545em 0.1363em 0.6818em',
+      fontSize: '1em',
+      lineHeight: '1.1818em',
     },
   },
 })(TextField);
@@ -125,83 +122,22 @@ const MultiTextField = withStyles({
   },
 })(TextField);
 
-const useStyles = makeStyles({
-  root: {
-    fontFamily: 'Gelion',
-    '&:hover': {
-      backgroundColor: 'transparent',
-    },
-    marginRight: '20px',
-  },
-  icon: {
-    fontFamily: 'Gelion',
-    borderRadius: '50%',
-    width: 13,
-    height: 13,
-    boxShadow: 'inset 0 0 0 1px rgba(16,22,26,.2), inset 0 -1px 0 rgba(16,22,26,.1)',
-    backgroundColor: '#f5f8fa',
-    backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.8),hsla(0,0%,100%,0))',
-    '$root.Mui-focusVisible &': {
-      outline: '2px auto rgba(19,124,189,.6)',
-      outlineOffset: 2,
-    },
-    'input:hover ~ &': {
-      backgroundColor: '#ebf1f5',
-    },
-    'input:disabled ~ &': {
-      boxShadow: 'none',
-      background: 'rgba(206,217,224,.5)',
-    },
-  },
-  checkedIcon: {
-    fontFamily: 'Gelion',
-    backgroundColor: '#137cbd',
-    backgroundImage: 'linear-gradient(180deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,0))',
-    '&:before': {
-      display: 'block',
-      width: 13,
-      height: 13,
-      backgroundImage: 'radial-gradient(#fff,#fff 28%,transparent 32%)',
-      content: '""',
-    },
-    'input:hover ~ &': {
-      backgroundColor: '#106ba3',
-    },
-  },
-});
-
-// Styled Radio
-function StyledRadio(props) {
-  const classes = useStyles();
-
-  return (
-    <Radio
-      className={classes.root}
-      disableRipple
-      color="default"
-      checkedIcon={<span className={clsx(classes.icon, classes.checkedIcon)} />}
-      icon={<span className={classes.icon} />}
-      {...props}
-    />
-  );
-}
-
 // Button
 const ValidateButton = withStyles({
   root: {
     fontFamily: 'Gelion',
     boxShadow: 'none',
     textTransform: 'none',
-    fontSize: 23,
+    fontSize: '1.04545em',
     fontWeight: 200,
-    padding: '6px 12px',
+    padding: '0.2727em 0.4615em',
     border: '1px solid',
-    lineHeight: '23px',
+    lineHeight: '1.045em',
     backgroundColor: '#1C1C1C',
     borderColor: '#1C1C1C',
-    borderRadius: '38px',
-    width:'416px',
-    height:'62px',
+    borderRadius: '1.727em',
+    width:'18.909em',
+    height:'2.8181em',
     '&:hover': {
       backgroundColor: '#313131',
       borderColor: '#313131',
@@ -222,11 +158,11 @@ const CustomFromLabel = withStyles({
   root: {
     fontFamily: 'Gelion',
     '& > *': {
-      padding: '0 10px 10px 15px',
+      padding: '0 0.4545em 0.4545em 0.6818em',
       fontFamily: 'Gelion',
       fontWeight: '200',
-      fontSize: '16px',
-      lineHeight: '23px',
+      fontSize: '1em',
+      lineHeight: '1.04545em',
     },
   },
 })(FormControlLabel);
@@ -244,6 +180,10 @@ export class CustomItems extends React.Component {
     let item = [];
 
     switch (this.props.method) {
+      case "Label":
+        item = <div className="content"> <span className="title"> {this.props.label} </span> </div>;
+        break;
+        
       case "Text":
         item = <span className="content text">{this.props.text}</span>;
         break;
@@ -265,7 +205,7 @@ export class CustomItems extends React.Component {
 
       case "Select":
         item = (
-          <GreyTextField className="content" label="" select value={this.props.value} onChange={this.props.onChange} {...this.props} fullWidth required >
+          <GreyTextField className="content" label="" select value={this.props.value} onChange={this.props.onChange} {...this.props} required >
             {
               this.props.options.map(option => (
                 <MenuItem key={option.value} value={option.value}> {option.label} </MenuItem>
@@ -273,6 +213,17 @@ export class CustomItems extends React.Component {
             }
           </GreyTextField>
         );
+        break;
+
+      case "Email":
+        item = <div className="inner">
+                  <GreyInput className="content" label="" placeholder="" value={this.props.value} {...this.props} fullWidth />
+                  <span className={this.props.verified ? "verification active": "verification"}>
+                    <span className="mark">&#10003;</span>
+                    &nbsp;
+                    Mail address verification
+                  </span>
+              </div>
         break;
 
       case "PhoneNumber":
@@ -283,8 +234,8 @@ export class CustomItems extends React.Component {
                     onChange={this.props.onChange}
                     inputStyle = {{
                       border: 'none',
-                      fontSize: '22px',
-                      lineHeight: '26px',
+                      fontSize: '1em',
+                      lineHeight: '1.1818em',
                     }}
                     containerStyle = {{
                       borderBottom: '1px solid grey',
@@ -294,7 +245,7 @@ export class CustomItems extends React.Component {
                       border: 'none',
                     }}
                     required />
-                  <span className="verification">
+                  <span className={this.props.verified ? "verification active": "verification"}>
                     <span className="mark">&#10003;</span>
                     &nbsp;
                     Phone number verification
@@ -303,11 +254,21 @@ export class CustomItems extends React.Component {
         break;
 
       case "Option":
-        item = <FormControl component="fieldset">
-                <RadioGroup aria-label="agree" name="agree" value={this.props.value} onChange={this.props.onChange}>
-                  <CustomFromLabel value="agree" control={<StyledRadio />} label={this.props.label} />
-                </RadioGroup>
-              </FormControl>
+        item = <CustomFromLabel
+                value="end"
+                control={
+                  <Checkbox 
+                    className="content"
+                    color="primary" 
+                    icon={<CircleUnchecked style={{width: '13px'}} />}
+                    checkedIcon={<CircleCheckedFilled style={{width: '13px', fill: "#333333"}}  />}
+                    checked={this.props.value}
+                    onChange={this.props.onChange}
+                    {...this.props}/>
+                }
+                label={this.props.label}
+                labelPlacement="end"
+              />        
         break;
 
       case "Button":
@@ -323,12 +284,13 @@ export class CustomItems extends React.Component {
                       style={{
                         boxShadow: 'none',
                         fontFamily: 'Gelion',
-                        fontSize: '22px',
-                        lineHeight: '26px',
+                        fontSize: '1.333em',
+                        lineHeight: '1.0196em',
                         color: '#333333',
                         width: '100%',
                         outline: 'none',
-                        padding: '0 20px 10px 20px',
+                        padding: '0 0.909em 0.4545em 0.909em',
+                        border: 'none',
                         borderBottom: '1px solid #CCCCCC',
                       }}
                       {...props}
@@ -353,7 +315,7 @@ export class CustomItems extends React.Component {
     }
 
     return (
-      <div className="item-container">
+      <div className={this.props.rowtype !== undefined && this.props.rowtype === "true" ? "item-container": "col-md-6 item-container"}>
         <div className="item">
           <div className="type" style={(this.props.text === "" || this.props.title === "hidden") ? {display: 'none'} : {display: 'flex'}}>{this.props.text}</div>
           <div className="input">
@@ -365,4 +327,4 @@ export class CustomItems extends React.Component {
       </div>
     );
   }
-}
+} 
