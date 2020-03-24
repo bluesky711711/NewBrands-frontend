@@ -1,75 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { withTranslation } from 'react-i18next';
 
 import { PriceCard } from "components";
 
 import 'assets/styles/pages/pricing.scss';
 
-const contentList = {
-  title: {
-    title: "THINGS FOR EACH AND EVERY PRICE",
-    content: "There are numerous things Contractbook contains that will speed up and enhance  your workflow regarding contracts. Take a look!",
-  },
-  subcontents: [
-    {
-      title: "/ THAT’S AUTHENTIC TO YOU",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    },
-    {
-      title: "/ THAT’S AUTHENTIC TO YOU",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    },
-    {
-      title: "/ THAT’S AUTHENTIC TO YOU",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    },
-    {
-      title: "/ THAT’S AUTHENTIC TO YOU",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    },
-    {
-      title: "/ THAT’S AUTHENTIC TO YOU",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    },
-    {
-      title: "/ THAT’S AUTHENTIC TO YOU",
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-    },
-  ]
-}
-
-const creators = [
-  {
-    note1: "Per month for 12 months only.",
-    note2: "then, 7% per production + 0,25 €",
-    description: "Nous vous accompagnons dans les étapes essentielles et nous nous occupons du reste.",
-  },
-  {
-    note1: "1   production out of charge",
-    note2: "then, 7% per production + 0,25 €",
-    description: "Nous vous accompagnons dans les étapes essentielles et nous nous occupons du reste.",
-  },
-];
-
-const brands = [
-  {
-    note1: "Per month for 12 months only.",
-    note2: "Plus, 7% per production + 0,25 €",
-    description: "If you process more than € 15,000 per quarter of production volume or produce complex models.",
-  },
-  {
-    note1: "1   production out of charge",
-    note2: "then, 1,4 % per production + 0,25 €",
-    description: "If you process more than € 15,000 per quarter of production volume or produce complex models.",
-  }
-];
+const subcontents_count = 6;
 
 class PricingCreators extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      creators: creators[0],
-      brands: brands[0],
+      creators: 0,
+      brands: 0,
       creators_price: 50,
       brands_price: 80,
       pricing_view: "monthly"
@@ -87,8 +31,8 @@ class PricingCreators extends React.Component {
       pricing_view: "monthly",
       creators_price: 50,
       brands_price: 80,
-      creators: creators[0],
-      brands: brands[0]
+      creators: 0,
+      brands: 0
     });
   }
 
@@ -97,8 +41,8 @@ class PricingCreators extends React.Component {
       pricing_view: "yearly",
       creators_price: 500,
       brands_price: 800,
-      creators: creators[1],
-      brands: brands[1]
+      creators: 1,
+      brands: 1
     });
   }
 
@@ -107,21 +51,24 @@ class PricingCreators extends React.Component {
   }
 
   render() {
-    let content_items = contentList.subcontents.map((item, index) => {
-      return (
-        <div className="col-md-6" key={index}>
+    const { t } = this.props;
+
+    let content_items = [];
+    for (let i = 0; i < subcontents_count; i++) {
+      content_items.push(
+        <div className="col-md-6" key={i}>
           <div className="content-item">
-            <span className="title"> {item.title} </span>
-            <span className="content"> {item.content} </span>
+            <span className="title"> {t("PricePage.ContentList.Creators.Subcontents."+i+".Title")} </span>
+            <span className="content"> {t("PricePage.ContentList.Creators.Subcontents."+i+".Content")} </span>
           </div>
         </div>
       );
-    });
+    }
 
     let content_title = (
       <div className="content-title">
-        <span className="title"> { contentList.title.title } </span>
-        <span className="content"> { contentList.title.content } </span>
+        <span className="title"> { t("PricePage.ContentList.Creators.Title.Title") } </span>
+        <span className="content"> { t("PricePage.ContentList.Creators.Title.Content") } </span>
       </div>
     );
 
@@ -129,43 +76,43 @@ class PricingCreators extends React.Component {
       <div className="pricing-creators">
         <div className="page-container">
           <div className="pricing-banner">
-            <span className="title"> Pricing </span>
+            <span className="title"> { t("PricePage.Pricing") } </span>
             <span className="description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              {t("PricePage.PriceDescription")}
             </span>
             <div className="monthly-btns">
-              <span className={this.state.pricing_view === "monthly" ? "btn-base active" : "btn-base"} onClick={this.setMonthly}>Monthly</span>
-              <span className={this.state.pricing_view === "yearly" ? "btn-base active" : "btn-base"} onClick={this.setYearly}>Yearly</span>
+              <span className={this.state.pricing_view === "monthly" ? "btn-base active" : "btn-base"} onClick={this.setMonthly}>{t("PricePage.Monthly")}</span>
+              <span className={this.state.pricing_view === "yearly" ? "btn-base active" : "btn-base"} onClick={this.setYearly}>{t("PricePage.Yearly")}</span>
             </div>
             <div className="pricing-cards">
               <PriceCard type="inactive"
-                title="CREATEURS"
+                title={t("PricePage.Creators.Label").toUpperCase()}
                 price={this.state.creators_price}
                 view="unit-price"
                 unit="€"
-                note1={this.state.creators.note1}
-                note2={this.state.creators.note2}
-                description={this.state.creators.description}
+                note1={t("PricePage.Creators."+this.state.creators+".Note1")}
+                note2={t("PricePage.Creators."+this.state.creators+".Note2")}
+                description={t("PricePage.Creators."+this.state.creators+".Description")}
+                btnname={t("PricePage.StartButton")}
                 onClick = {this.onStartNew}
               />
               <PriceCard type="inactive"
-                title="BRANDS"
+                title={t("PricePage.Brands.Label").toUpperCase()}
                 price={this.state.brands_price}
                 view="unit-price"
                 unit="€"
-                note1={this.state.brands.note1}
-                note2={this.state.brands.note2}
-                description={this.state.brands.description}
+                note1={t("PricePage.Brands."+this.state.brands+".Note1")}
+                note2={t("PricePage.Brands."+this.state.brands+".Note2")}
+                description={t("PricePage.Brands."+this.state.brands+".Description")}
+                btnname={t("PricePage.StartButton")}
                 onClick = {this.onStartNew}
               />
             </div>
             <div className="faq">
               <Link to="#" className="owner">
-                <span className="owner"> You process more than € 30,000 per quarter of production volume ? /  </span>
-                <span className="ask"> Contacter l’équipe commerciale </span>
+                <span className="owner"> {t("PricePage.Callback.Creators.Note1")}  </span>
+                <span className="ask"> {t("PricePage.Callback.Creators.Note2")} </span>
               </Link>
-              {/* <span className="interval"> / </span>
-              <Link to="#" className="ask"></Link> */}
             </div>
           </div>
           <div className="content-banner">
@@ -175,7 +122,7 @@ class PricingCreators extends React.Component {
             </div>
           </div>
           <div className="contact-banner">
-            <div className="col-xl-6 col-5 question question"> Keep having question ? </div>
+            <div className="col-xl-6 col-5 question question"> {t("PricePage.FAQ")} </div>
             <div className="col-xl-6 col-7 informaion">
               <span className="times"> Mon -- Fri     /     9:30am -- 5:30pm </span>
               <br/>
@@ -188,4 +135,4 @@ class PricingCreators extends React.Component {
   }
 }
 
-export default PricingCreators;
+export default withTranslation()(PricingCreators);

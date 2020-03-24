@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { withTranslation } from 'react-i18next';
 import { CustomItems } from "components";
 import { geocodeByAddress, getLatLng } from 'react-google-places-autocomplete';
 
@@ -78,8 +78,8 @@ class RegistrationPartner extends React.Component {
     this.handleAddressInformation = this.handleAddressInformation.bind(this);
     this.handleGoogleAddress = this.handleGoogleAddress.bind(this);
   }
-  componentDidMount() {
 
+  componentDidMount() {
   }
 
   selectCountry(event) {
@@ -210,6 +210,8 @@ class RegistrationPartner extends React.Component {
   }
 
   render() {
+    const { t } = this.props;
+
     // Make Address Information Component
     let address = [];
     for (let id = 0; id < this.state.address_count; id++) {
@@ -242,7 +244,7 @@ class RegistrationPartner extends React.Component {
             text=""
             title="hidden" 
             id={"list-item "+id} 
-            placeholder="Write here..."
+            placeholder={t("Register.WriteHere")+"..."}
             value={this.state.materials_content[id]}
             onChange={e => this.onChangeMeterial(e, id)}
             onKeyPress={event => this.onAddMaterials(event, id)} />
@@ -258,7 +260,7 @@ class RegistrationPartner extends React.Component {
           text="" 
           title="hidden" 
           rowtype="true"
-          placeholder="Write here..."
+          placeholder={t("Register.WriteHere")+"..."}
           value={this.state.materials_content[this.state.material_count]}
           onChange={e => this.onChangeMeterial(e, this.state.material_count)}
           onKeyPress={event => this.onAddMaterials(event, this.state.material_count)} />
@@ -276,7 +278,7 @@ class RegistrationPartner extends React.Component {
             text="" 
             title="hidden" 
             id={"list-item "+id+this.state.material_count+1} 
-            placeholder="Write here..." 
+            placeholder={t("Register.WriteHere")+"..."}
             value={this.state.processes_content[id]}
             onChange={e => this.onChangeProcess(e, id)}
             onKeyPress={event => this.onAddProcess(event, id)} />          
@@ -292,7 +294,7 @@ class RegistrationPartner extends React.Component {
           title="hidden"
           id={"list-item "+this.state.process_count+this.state.material_count+1}
           rowtype="true"
-          placeholder="Write here..." 
+          placeholder={t("Register.WriteHere")+"..."}
           value={this.state.processes_content[this.state.process_count]}
           onChange={e => this.onChangeProcess(e, this.state.process_count)}
           onKeyPress={event => this.onAddProcess(event, this.state.process_count)} />
@@ -302,26 +304,26 @@ class RegistrationPartner extends React.Component {
     return (
       <div className="registration-partner">        
         <div className="page-container">
-          <span className="title-banner"> Let’s change the process for a brand new industry! </span>
+          <span className="title-banner"> {t("Register.Title.Partner")} </span>
           <div className="registration-banner">
             <div className="options">
-              <CustomItems method="Input" text="Full name *" id="full-name" value={this.state.fullname} required />
-              <CustomItems method="Input" text="Brand name *" id="brand-name" value={this.state.brandname} required />
-              <CustomItems method="Select" text="Country *" id="country" options={countries} value={this.state.country} onChange={this.selectCountry} required />
-              <CustomItems method="Email" text="E-Mail *" id="email" type="email" value={this.state.email} verified={this.state.email_verified.toString()} required />
-              <CustomItems method="Label" text="" title="hidden" id="type-find-label" label="How did you find out about us?" />
+              <CustomItems method="Input" text={t("Register.Fullname")+"  *"} id="full-name" value={this.state.fullname} required />
+              <CustomItems method="Input" text={t("Register.Brandname")+"  *"} id="brand-name" value={this.state.brandname} required />
+              <CustomItems method="Select" text={t("Register.Country")+"  *"} id="country" options={countries} value={this.state.country} onChange={this.selectCountry} required />
+              <CustomItems method="Email" text={t("Register.Email.Label")+"  *"} verifylabel={t("Register.Email.Verify")} id="email" type="email" value={this.state.email} verified={this.state.email_verified.toString()} required />
+              <CustomItems method="Label" text="" title="hidden" id="type-find-label" label={t("Register.FindOut")} />
               <CustomItems method="Select" text="" title="hidden" id="type-find" options={find_types} value={this.state.findType} onChange={this.selectFindtype} />
-              <CustomItems method="PhoneNumber" text="Phone № *" id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} verified={this.state.phone_verified.toString()} required />
-              <CustomItems method="Input" text="DUNS № (if company created)" id="duns" value={this.state.duns_number} type="number" />
-              <CustomItems method="Input" text="Company founded in  *" id="company-date" value={this.state.company_date} type="number" required />
-              <CustomItems method="Input" text="Type of company *" id="company-type" value={this.state.company_type} required />
-              <CustomItems method="Label" text="" title="hidden" id="type-software-label" label="Software of production using  *" />
+              <CustomItems method="PhoneNumber" text={t("Register.Phone.Label")+" *"} verifylabel={t("Register.Phone.Verify")} id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} verified={this.state.phone_verified.toString()} required />
+              <CustomItems method="Input" text={t("Register.DUNS")} id="duns" value={this.state.duns_number} type="number" />
+              <CustomItems method="Input" text={t("Register.CompanyDate")+"  *"} id="company-date" value={this.state.company_date} type="number" required />
+              <CustomItems method="Input" text={t("Register.CompanyType")+"  *"} id="company-type" value={this.state.company_type} required />
+              <CustomItems method="Label" text="" title="hidden" id="type-software-label" label={t("Register.Software")+"  *"} />
               <CustomItems method="Select" text="" title="hidden" id="type-software" options={softwares} value={this.state.software} onChange={this.selectSoftware} required />
-              <CustomItems method="Input" text="Minimum production quantity *" id="production" value={this.state.min_production} required />
-              <CustomItems method="Input" text="Basic Technical Templates *" id="template" value={this.state.basic_technical} required />
-              <CustomItems method="Input" text="Company size *" id="company-size" value={this.state.company_size} required />
-              <CustomItems method="Input" text="№ of factories *" id="factory-number" value={this.state.facory_number} required />
-              <CustomItems method="Label" text="" title="hidden" id="address-lable" label="Please, enter their addresses" />
+              <CustomItems method="Input" text={t("Register.MinimumProduction")+"  *"} id="production" value={this.state.min_production} required />
+              <CustomItems method="Input" text={t("Register.BasicTechnical")+"  *"} id="template" value={this.state.basic_technical} required />
+              <CustomItems method="Input" text={t("Register.CompanySize")+"  *"} id="company-size" value={this.state.company_size} required />
+              <CustomItems method="Input" text={t("Register.FactoryNumber")+"  *"} id="factory-number" value={this.state.facory_number} required />
+              <CustomItems method="Label" text="" title="hidden" id="address-lable" label={t("Register.AddressLabel")} />
               <CustomItems 
                 method="GooglePlaces" 
                 text="" 
@@ -331,39 +333,38 @@ class RegistrationPartner extends React.Component {
                 onSelect={this.handleGoogleAddress}
               />
               { address }
-              <CustomItems method="Label" text="" title="hidden" id="address-lable" label="Your industry  *" />
+              <CustomItems method="Label" text="" title="hidden" id="address-lable" label={t("Register.YourIndustry")+"  *"} />
               <CustomItems method="Input" text="" title="hidden" id="inline-industry" value={this.state.your_industry} required />
-              <CustomItems method="Label" text="" title="hidden" id="address-lable" label="Your Know-how  *" />
+              <CustomItems method="Label" text="" title="hidden" id="address-lable" label={t("Register.YourKnowHow")+"  *"} />
               <CustomItems method="Input" text="" title="hidden" id="inline-know-how" value={this.state.your_knowhow} required />
               <div className="inline list">
-                <div className="inline-container"> <span className="title"> Materials with which you are working ? </span> </div>
+                <div className="inline-container"> <span className="title"> {t("Register.MaterialLabel")} </span> </div>
                 <div className="inline-list">
                   {materials}
                 </div>
               </div>
               <div className="inline list">
-                <div className="inline-container"> <span className="title"> Process that you are using ? </span> </div>
+                <div className="inline-container"> <span className="title"> {t("Register.ProcessUsing")} </span> </div>
                 <div className="inline-list">
                   {process}
                 </div>
               </div>
               <div className="inline list bottom">
-                <div className="inline-container"> <span className="title"> Do you have any obeservation ? </span> </div>
+                <div className="inline-container"> <span className="title"> {t("Register.ObservationLabel")} </span> </div>
                 <span className="inline-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua__
+                {t("Register.Observation")}
                 </span>
               </div>
             </div>
           </div>
           <div className="agree-banner">
-            {/* <CustomItems method="Option" text="" id="agree" value={this.agreed ? "agree" : ""} onChange={this.selectAgree} */}
-            <CustomItems method="Option" text="" title="hidden" id="agree" value={""} onChange={this.selectAgree}
-              label="I agree to receive occasional newsletters containing news and advice on creating personal and business progress to becoming sustainable and ethics." 
+            <CustomItems method="Option" text="" title="hidden" id="agree" value={this.state.agreed} onChange={this.selectAgree}
+              label={t("Register.AgreeLabel")}
               rowtype="true"/>
           </div>
           <div className="validate-banner">
-            <span>En validant, vous acceptez les <strong>Conditions Générales d’Utilisation</strong> de NewBrands.fr ainsi vous confirmer avoir consulté nos <strong>Conditions Particulières</strong> et <strong>Conditions Générales de Services</strong>, notre <strong>Politique de Confidentialité</strong> ainsi que notre <strong>Notice Cookies.</strong></span>
-            <CustomItems method="Button" label="VALIDATE" id="validate" onClick={this.onValidate} required />
+            <span dangerouslySetInnerHTML={{ __html: t("Register.Notation") }} />
+            <CustomItems method="Button" label={t("Register.Validation").toUpperCase()} id="validate" onClick={this.onValidate} required />
           </div>
         </div>
       </div>
@@ -371,4 +372,4 @@ class RegistrationPartner extends React.Component {
   }
 }
 
-export default RegistrationPartner;
+export default withTranslation()(RegistrationPartner);

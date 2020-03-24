@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { withTranslation } from 'react-i18next';
+import i18next from 'i18next';
+
 // import { alertService } from 'services/alert';
 // import { authService } from 'services/auth';
 
@@ -14,12 +17,12 @@ const menuItems = [
     { url: "/pricing-creators", text: "Pricing", active: false }
   ],
   [
-    { url: "/pricing-creators", text: "Register my Brand", active: false },
-    { url: "/contact-us", text: "Contact us", active: false }
+    { url: "/pricing-creators", text: "Register", active: false },
+    { url: "/contact-us", text: "Contactus", active: false }
   ],
 ];
 
-export class AppHeader extends React.Component {
+class AppHeader extends React.Component {
   constructor(props) {
     super(props);
 
@@ -32,6 +35,7 @@ export class AppHeader extends React.Component {
 
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.handleMenuOpen = this.handleMenuOpen.bind(this);
+    this.handleLanguage = this.handleLanguage.bind(this);
   }
 
   componentDidMount() {
@@ -40,6 +44,10 @@ export class AppHeader extends React.Component {
 
   UNSAFE_componentWillMount() {
     menuItems[0][0].active = true;
+  }
+
+  handleLanguage(lang) {
+    i18next.changeLanguage(lang);
   }
 
   handleMenuOpen() {
@@ -64,6 +72,8 @@ export class AppHeader extends React.Component {
   }
 
   render() {
+    const { t } = this.props;
+
     const { menu_open } = this.state;
     const isBlackHeader = this.props.type === 'black';
     const hrStyles = (isBlackHeader ? "header black" : "header white");
@@ -75,7 +85,7 @@ export class AppHeader extends React.Component {
               return (
                 <li key={sub_index} className="menu-item" onClick={event => this.handleMenuClick(event, index, sub_index)}>
                   <Link to={sub_menu.url} className={`menu-link ${sub_menu.active === true ? "active" : ""}`} >
-                    {sub_menu.active ? (sub_menu.text + " /") : sub_menu.text}
+                    {sub_menu.active ? (t("Header."+sub_menu.text) + " /") : t("Header."+sub_menu.text)}
                   </Link>
                 </li>
               );
@@ -87,9 +97,9 @@ export class AppHeader extends React.Component {
 
     let langbar = (
       <div className="col-xl-2 col-lg-4 col-md-3 language-bar collapse-menu">
-        <Link to="#" className="nb-link"> En </Link>
+        <Link to="#" className="nb-link" onClick={()=> this.handleLanguage('en')}> En </Link>
         <div className="submenu">
-          <Link to="#" className="nb-link"> Fr </Link>
+          <Link to="#" className="nb-link" onClick={() => this.handleLanguage('fr')}> Fr </Link>
         </div>
       </div>
     );
@@ -126,3 +136,5 @@ export class AppHeader extends React.Component {
     )
   }
 }
+
+export default withTranslation()(AppHeader);

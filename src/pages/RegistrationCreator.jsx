@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { withTranslation } from 'react-i18next';
 import { CustomItems } from "components";
 
 import 'assets/styles/pages/registration.scss';
@@ -84,36 +84,37 @@ class RegistrationCreator extends React.Component {
 
   render() {
 
+    const { t } = this.props;
+
     return (
       <div className="registration-creator">        
         <div className="page-container">
-          <span className="title-banner"> Let’s produce together your future sustainable collection? </span>
+          <span className="title-banner"> {t("Register.Title.Creators")} </span>
           <div className="registration-banner">
             <div className="options">
-              <CustomItems method="Input" text="Full name *" id="full-name" value={this.state.fullname} required />
-              <CustomItems method="Input" text="Brand name *" id="brand-name" value={this.state.brandname} required />
-              <CustomItems method="Select" text="Country *" id="country" options={countries} value={this.state.country} onChange={this.selectCountry} required />
-              <CustomItems method="Email" text="E-Mail *" id="email" type="email" value={this.state.email} verified={this.state.email_verified.toString()} required />
-              <CustomItems method="Label" text="" title="hidden" id="address-lable" label="How did you find out about us?" />
+              <CustomItems method="Input" text={t("Register.Fullname")+"  *"} id="full-name" value={this.state.fullname} required />
+              <CustomItems method="Input" text={t("Register.Brandname")+"  *"} id="brand-name" value={this.state.brandname} required />
+              <CustomItems method="Select" text={t("Register.Country")+"  *"} id="country" options={countries} value={this.state.country} onChange={this.selectCountry} required />
+              <CustomItems method="Email" text={t("Register.Email.Label")+"  *"} verifylabel={t("Register.Email.Verify")} id="email" type="email" value={this.state.email} verified={this.state.email_verified.toString()} required />
+              <CustomItems method="Label" text="" title="hidden" id="address-lable" label={t("Register.FindOut")} />
               <CustomItems method="Select" text="" id="inline-type" options={find_types} value={this.state.findType} onChange={this.selectFindtype} />
-              <CustomItems method="PhoneNumber" text="Phone № *" id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} verified={this.state.phone_verified.toString()} required />
-              <CustomItems method="Input" text="DUNS № (if company created)" id="duns" value={this.state.duns_number} type="number" />
-              <CustomItems method="Input" text="AVG. production volume *" id="production-volume" value={this.state.avg_production} type="number" required />
-              <CustomItems method="Input" text="How often are you producing  *" id="how-produce" value={this.state.how_producing} required />
-              <CustomItems method="Input" text="Members in your team  *" id="members" value={this.state.team_members} required />
-              <CustomItems method="Input" text="Are your brand sustainable ready *" id="sustainable" value={this.state.brand_ready} required />
+              <CustomItems method="PhoneNumber" text={t("Register.Phone.Label")+" *"} verifylabel={t("Register.Phone.Verify")} id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} verified={this.state.phone_verified.toString()} required />
+              <CustomItems method="Input" text={t("Register.DUNS")} id="duns" value={this.state.duns_number} type="number" />
+              <CustomItems method="Input" text={t("Register.AvgProduction")+"  *"} id="production-volume" value={this.state.avg_production} type="number" required />
+              <CustomItems method="Input" text={t("Register.HowProduction")+"  *"} id="how-produce" value={this.state.how_producing} required />
+              <CustomItems method="Input" text={t("Register.Members.Label")+"  *"} id="members" value={this.state.team_members} required />
+              <CustomItems method="Input" text={t("Register.BrandReady.Label")+"  *"} id="sustainable" value={this.state.brand_ready} required />
             </div>
           </div>
           <div className="agree-banner">
-            {/* <CustomItems method="Option" text="" id="agree" value={this.agreed ? "agree" : ""} onChange={this.selectAgree} */}
-            <CustomItems method="Option" text="" id="agree" value={this.agreed} onChange={this.selectAgree}
-                label="I agree to receive occasional newsletters containing news and advice on creating personal and business progress to becoming sustainable and ethics." 
+            <CustomItems method="Option" text="" title="hidden" id="agree" value={this.state.agreed} onChange={this.selectAgree}
+                label={t("Register.AgreeLabel")}
                 rowtype="true"
             />
           </div>
           <div className="validate-banner">
-            <span>En validant, vous acceptez les <strong>Conditions Générales d’Utilisation</strong> de NewBrands.fr ainsi vous confirmer avoir consulté nos <strong>Conditions Particulières</strong> et <strong>Conditions Générales de Services</strong>, notre <strong>Politique de Confidentialité</strong> ainsi que notre <strong>Notice Cookies.</strong></span>
-            <CustomItems method="Button" label="VALIDATE" id="validate" onClick={this.onValidate} required />
+            <span dangerouslySetInnerHTML={{ __html: t("Register.Notation") }} />
+            <CustomItems method="Button" label={t("Register.Validation").toUpperCase()} id="validate" onClick={this.onValidate} required />
           </div>
         </div>
       </div>
@@ -121,4 +122,4 @@ class RegistrationCreator extends React.Component {
   }
 }
 
-export default RegistrationCreator;
+export default withTranslation()(RegistrationCreator);

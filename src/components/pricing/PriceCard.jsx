@@ -13,7 +13,6 @@ export class PriceCard extends React.Component {
   }
 
   render() {
-
     let parts = this.props.price.toFixed(2).split(".");
     let formattedPrice = parts[0] + (parts[1] ? "," + parts[1] : "");
 
@@ -40,7 +39,7 @@ export class PriceCard extends React.Component {
         <span className="notation">
           { this.props.description }
         </span>
-        <Link to="#" className="start-now" onClick={this.props.onClick}> Get started now </Link>
+        <Link to="#" className="start-now" onClick={this.props.onClick}> {this.props.btnname} </Link>
       </div>
     );
   }

@@ -1,0 +1,190 @@
+{
+  "Header": {
+    "Home": "Home",
+    "Pricing": "Pricing",
+    "Register": "Register my Brand",
+    "Contactus": "Contact us"
+  },
+
+  "Footer": {
+    "Title": {
+      "Social": "Social",
+      "Info": "Info",
+      "Service": "Service"
+    },
+    "Social": {
+      "ContactUs": "Contact us",
+      "TradePartners": "Trade Partners",
+      "PressReleases": "Press Releases",
+      "MediaCoverage": "Media Coverage"
+    },
+    "Info": {
+      "SocialResponsibility": "Social Responsibility",
+      "PrivacyPolicy": "Privacy Policy",
+      "SiteMap": "Site Map"
+    },
+    "Service": {
+      "Warranty": "Warranty",
+      "Returns": "Returns",
+      "FAQ": "FAQ"
+    },
+    "Copyright": "© Copyright 2017-2020, NewBrands.fr, SAS et its partners"
+  },
+  
+  "PricePage": {
+    "Pricing": "Pricing",
+    "PriceDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Factories": {
+      "Label": "Factories",
+      "Note1": "No monthly payment",
+      "Note2": "and 0 € or % of additional fees, no matter what.",
+      "Description": "If you process more than € 50,000 per quarter, then a monthly plan could be negotiated."
+    },
+    "Monthly": "Monthly",
+    "Yearly": "Yearly",
+    "Creators": {
+      "Label": "Creators",
+      "0": {
+        "Note1": "Per month for 12 months only.",
+        "Note2": "then, 7% per production + 0,25 €.",
+        "Description": "We support you in the essential steps and we take care of the rest."
+      },
+      "1": {
+        "Note1": "1   production out of charge",
+        "Note2": "then, 7% per production + 0,25 €",
+        "Description": "We support you in the essential steps and we take care of the rest."
+      }
+    },
+    "Brands": {
+      "Label": "Brands",
+      "0": {
+        "Note1": "Per month for 12 months only.",
+        "Note2": "Plus, 7% per production + 0,25 €",
+        "Description": "If you process more than € 15,000 per quarter of production volume or produce complex models."
+      },
+      "1": {
+        "Note1": "1   production out of charge",
+        "Note2": "then, 1,4 % per production + 0,25 €",
+        "Description": "If you process more than € 15,000 per quarter of production volume or produce complex models."
+      }
+    },
+    "StartButton": "Get started now",
+    "Callback": {
+      "Partners": {
+        "Note1": "Onwer of multiples factories in Europe ? /",
+        "Note2": "Ask for a call back"
+      },
+      "Creators": {
+        "Note1": "You process more than € 30,000 per quarter of production volume? /",
+        "Note2": "Contact the sales team"
+      }
+    },
+    "ContentList": {
+      "Partners": {
+        "Title": {
+          "Title": "THINGS FOR EACH AND EVERY PRICE",
+          "Content": "There are numerous things Contractbook contains that will speed up and enhance your workflow regarding contracts. Take a look!"
+        },
+        "Subcontents": {
+          "0": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "1": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "2": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "3": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          }
+        }
+      },
+      "Creators": {
+        "Title": {
+          "Title": "THINGS FOR EACH AND EVERY PRICE",
+          "Content": "There are numerous things Contractbook contains that will speed up and enhance your workflow regarding contracts. Take a look!"
+        },
+        "Subcontents": {
+          "0": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "1": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "2": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "3": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "4": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          },
+          "5": {
+            "Title": "/ THAT’S AUTHENTIC TO YOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          }
+        }
+      }
+    },
+    "FAQ": "Keep having question ?"
+  },
+
+  "Register": {
+     "Title": {
+       "Partner": "Let’s change the process for a brand new industry!",
+       "Creators": "Let’s produce together your future sustainable collection?"
+     },
+     "Fullname": "Full name",
+     "Brandname": "Brand name",
+     "Coutry": "Country",
+     "Email": {
+       "Label": "E-Mail",
+       "Verify": "Mail address verification"
+     },
+     "FindOut": "How did you find out about us ?",
+     "Phone": {
+       "Label": "Phone №",
+       "Verify": "Phone number verification"
+     },
+     "DUNS": "DUNS № (if company created)",
+     "AvgProduction": "AVG. production volume",
+     "HowProduction": "How often are you producing",
+     "Members": {
+       "Lable": "Members in your team",
+       "0": "I am alone"
+     },
+     "BrandReady": {
+       "Lable": "Are your brand sustainable ready",
+       "0": "No, let's change that together!"
+     },
+     "CompanyDate": "Company founded in",
+     "CompanyType": "Type of company",
+     "Software": "Software of production using",
+     "MinimumProduction": "Minimum production quantity",
+     "BasicTechnical": "Basic Technical Templates",
+     "CompanySize": "Company size",
+     "FactoryNumber": "№ of factories",
+     "AddressLabel": "Please, enter their addresses",
+     "YourIndustry": "Your industry",
+     "YourKnowHow": "Your Know-how",
+     "MaterialLabel": "Materials with which you are working ?",
+     "WriteHere": "Write here",
+     "ProcessUsing": "Process that you are using ?",
+     "ObservationLabel": "Do you have any obeservation ? ",
+     "Observation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua__",
+     "AgreeLabel": "I agree to receive occasional newsletters containing news and advice on creating personal and business progress to becoming sustainable and ethics.",
+     "Notation": "By validating, you accept the <strong>Terms of Service</strong> of NewBrands.fr and confirm that you have consulted our <strong>Special Conditions</strong> and <strong>General Conditions of Services</strong>, our <strong>Privacy Policy</strong> as well as our <strong>Cookies Notice</strong>.",
+     "Validation": "Validation"
+  }
+}

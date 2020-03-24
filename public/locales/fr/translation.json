@@ -1,0 +1,190 @@
+{
+  "Header": {
+    "Home": "Accueil",
+    "Pricing": "Tarification",
+    "Register": "Enregistrer ma marque",
+    "Contactus": "Nous contacter"
+  },
+
+  "Footer": {
+    "Title": {
+      "Social": "Social",
+      "Info": "Info",
+      "Service": "Un service"
+    },
+    "Social": {
+      "ContactUs": "Nous contacter",
+      "TradePartners": "Partenaires commerciaux",
+      "PressReleases": "Communiqués de presse",
+      "MediaCoverage": "Couverture médiatique"
+    },
+    "Info": {
+      "SocialResponsibility": "Responsabilité sociale",
+      "PrivacyPolicy": "Politique de confidentialité",
+      "SiteMap": "Plan du site"
+    },
+    "Service": {
+      "Warranty": "Garantie",
+      "Returns": "Retour",
+      "FAQ": "FAQ"
+    },
+    "Copyright": "© Copyright 2017-2020, NewBrands.fr, SAS et ses partenaires"
+  },
+
+  "PricePage": {
+    "Pricing": "Tarification",
+    "PriceDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Factories": {
+      "Label": "Des usines",
+      "Note1": "Aucun paiement mensuel",
+      "Note2": "et 0 € ou% de frais supplémentaires, quoi qu'il arrive.",
+      "Description": "Si vous traitez plus de 50 000 € par trimestre, un forfait mensuel pourra être négocié."
+    },
+    "Monthly": "Mensuel",
+    "Yearly": "Annuel",
+    "Creators": {
+      "Label": "Créateurs",
+      "0": {
+        "Note1": "Par mois pendant 12 mois seulement.",
+        "Note2": "puis, 7% par production + 0,25 €.",
+        "Description": "Nous vous accompagnons dans les étapes essentielles et nous nous occupons du reste."
+      },
+      "1": {
+        "Note1": "1 production gratuite",
+        "Note2": "puis, 7% par production + 0,25 €",
+        "Description": "Nous vous accompagnons dans les étapes essentielles et nous nous occupons du reste."
+      }
+    },
+    "Brands": {
+      "Label": "Marques",
+      "0": {
+        "Note1": "Par mois pendant 12 mois seulement.",
+        "Note2": "De plus, 7% par production + 0,25 €",
+        "Description": "Si vous traitez plus de 15 000 € par quart de volume de production ou produisez des modèles complexes."
+      },
+      "1": {
+        "Note1": "1 production gratuite",
+        "Note2": "puis, 1,4% par production + 0,25 €",
+        "Description": "Si vous traitez plus de 15 000 € par quart de volume de production ou produisez des modèles complexes."
+      }
+    },
+    "StartButton": "Commencez maintenant",
+    "Callback": {     
+      "Partners": {
+        "Note1": "Propriétaire de plusieurs usines en Europe? /",
+        "Note2": "Demander un rappel"
+      },
+      "Creators": {
+        "Note1": "Vous traitez plus de 30 000 € par trimestre de volume de production?",
+        "Note2": "Contacter l’équipe commerciale"
+      }
+    },
+    "ContentList": {
+      "Partners": {
+        "Title": {
+          "Title": "CHOSES POUR CHAQUE ET CHAQUE PRIX",
+          "Content": "Contractbook contient de nombreux éléments qui accéléreront et amélioreront votre flux de travail concernant les contrats. Regarde!"
+        },
+        "Subcontents": {
+          "0": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "1": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "2": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "3": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
+        }
+      },
+      "Creators": {
+        "Title": {
+          "Title": "CHOSES POUR CHAQUE ET CHAQUE PRIX",
+          "Content": "Contractbook contient de nombreux éléments qui accéléreront et amélioreront votre flux de travail concernant les contrats. Regarde!"
+        },
+        "Subcontents": {
+          "0": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "1": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "2": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "3": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "4": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          },
+          "5": {
+            "Title": "/ C'EST AUTHENTIQUE POUR VOU",
+            "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
+        }
+      }
+    },
+    "FAQ": "Continuez à avoir des questions?"
+  },
+
+  "Register": {
+    "Title": {
+      "Partner": "Changeons le processus pour une toute nouvelle industrie!",
+      "Creators": "Produisons ensemble votre future collection durable?"
+    },
+    "Fullname": "Nom complet",
+    "Brandname": "Marque Nom",
+    "Coutry": "Pays",
+    "Email": {
+      "Label": "E-Mail",
+      "Verify": "Vérification de l'adresse e-mail"
+    },
+    "FindOut": "Comment avez-vous entendu parler de nous ?",
+    "Phone": {
+      "Label": "Téléphone №",
+      "Verify": "Vérification du numéro de téléphone"
+    },
+    "DUNS": "DUNS № (si la société est créée)",
+    "AvgProduction": "AVG. volume de production",
+    "HowProduction": "À quelle fréquence produisez-vous",
+    "Members": {
+      "Lable": "Membres de votre équipe",
+      "0": "je suis seul"
+    },
+    "BrandReady": {
+      "Lable": "Votre marque est-elle prête pour le développement durable",
+      "0": "Non, changeons ça ensemble!"
+    },
+    "CompanyDate": "Entreprise fondée en",
+    "CompanyType": "Type de compagnie",
+    "Software": "Logiciel de production utilisant",
+    "MinimumProduction": "Quantité de production minimale",
+    "BasicTechnical": "Modèles techniques de base",
+    "CompanySize": "Taille de l'entreprise",
+    "FactoryNumber": "№ d'usines",
+    "AddressLabel": "Veuillez saisir leurs adresses",
+    "YourIndustry": "Votre industrie",
+    "YourKnowHow": "Votre savoir faire",
+    "MaterialLabel": "Matériaux avec lesquels vous travaillez ?",
+    "WriteHere": "Ecrire ici",
+    "ProcessUsing": "Processus que vous utilisez ?",
+    "ObservationLabel": "Avez-vous une observation ? ",
+    "Observation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua__",
+    "AgreeLabel": "J'accepte de recevoir des newsletters occasionnelles contenant des nouvelles et des conseils sur la création de progrès personnels et commerciaux pour devenir durable et éthique.",
+    "Notation": "En validant, vous acceptez les <strong>Conditions Générales d’Utilisation</strong> de NewBrands.fr ainsi vous confirmer avoir consulté nos <strong>Conditions Particulières</strong> et <strong>Conditions Générales de Services</strong>, notre <strong>Politique de Confidentialité</strong> ainsi que notre <strong>Notice Cookies.</strong>",
+    "Validation": "Validation"
+ }
+}

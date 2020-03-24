@@ -1,0 +1,72 @@
+{
+  "Header": {
+    "Home": "Home",
+    "Pricing": "Pricing",
+    "Register": "Register my Brand",
+    "Contactus": "Contact us"
+  },
+  "Footer": {
+    "Title": {
+      "Social": "Social",
+      "Info": "Info",
+      "Service": "Service"
+    },
+    "Social": {
+      "ContactUs": "Contact us",
+      "TradePartners": "Trade Partners",
+      "PressReleases": "Press Releases",
+      "MediaCoverage": "Media Coverage"
+    },
+    "Info": {
+      "SocialResponsibility": "Social Responsibility",
+      "PrivacyPolicy": "Privacy Policy",
+      "SiteMap": "Site Map"
+    },
+    "Service": {
+      "Warranty": "Warranty",
+      "Returns": "Returns",
+      "FAQ": "FAQ"
+    },
+    "Copyright": "© Copyright 2017-2020, NewBrands.fr, SAS et its partners"
+  },
+  "PricePage": {
+    "Pricing": "Pricing",
+    "PriceDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "Factories": {
+      "Label": "Factories",
+      "Note1": "No monthly payment",
+      "Note2": "and 0 € or % of additional fees, no matter what.",
+      "Description": "If you process more than € 50,000 per quarter, then a monthly plan could be negotiated."
+    },
+    "StartButton": "Get started now",
+    "Callback": {
+      "Note1": "Onwer of multiples factories in Europe ? /",
+      "Note2": "Ask for a call back"
+    },
+    "ContentList": {
+      "Title": {
+        "Title": "THINGS FOR EACH AND EVERY PRICE",
+        "Content": "There are numerous things Contractbook contains that will speed up and enhance your workflow regarding contracts. Take a look!"
+      },
+      "Subcontents": {
+        "0": {
+          "Title": "/ THAT’S AUTHENTIC TO YOU",
+          "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        },
+        "1": {
+          "Title": "/ THAT’S AUTHENTIC TO YOU",
+          "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        },
+        "2": {
+          "Title": "/ THAT’S AUTHENTIC TO YOU",
+          "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        },
+        "3": {
+          "Title": "/ THAT’S AUTHENTIC TO YOU",
+          "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+        }
+      }
+    },
+    "FAQ": "Keep having question ?"
+  }
+}

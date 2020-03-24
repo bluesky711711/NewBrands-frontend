@@ -221,7 +221,7 @@ export class CustomItems extends React.Component {
                   <span className={this.props.verified === "true" ? "verification active": "verification"}>
                     <span className="mark">&#10003;</span>
                     &nbsp;
-                    Mail address verification
+                    {this.props.verifylabel}
                   </span>
               </div>
         break;
@@ -248,7 +248,7 @@ export class CustomItems extends React.Component {
                   <span className={this.props.verified === "true" ? "verification active": "verification"}>
                     <span className="mark">&#10003;</span>
                     &nbsp;
-                    Phone number verification
+                    {this.props.verifylabel}
                   </span>
               </div>
         break;
@@ -264,6 +264,7 @@ export class CustomItems extends React.Component {
                     checkedIcon={<CircleCheckedFilled style={{width: '13px', fill: "#333333"}}  />}
                     checked={this.props.value}
                     onChange={this.props.onChange}
+                    disableRipple
                     {...this.props}/>
                 }
                 label={this.props.label}
