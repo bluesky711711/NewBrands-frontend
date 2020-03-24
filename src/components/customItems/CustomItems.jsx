@@ -218,7 +218,7 @@ export class CustomItems extends React.Component {
       case "Email":
         item = <div className="inner">
                   <GreyInput className="content" label="" placeholder="" value={this.props.value} {...this.props} fullWidth />
-                  <span className={this.props.verified ? "verification active": "verification"}>
+                  <span className={this.props.verified === "true" ? "verification active": "verification"}>
                     <span className="mark">&#10003;</span>
                     &nbsp;
                     Mail address verification
@@ -245,7 +245,7 @@ export class CustomItems extends React.Component {
                       border: 'none',
                     }}
                     required />
-                  <span className={this.props.verified ? "verification active": "verification"}>
+                  <span className={this.props.verified === "true" ? "verification active": "verification"}>
                     <span className="mark">&#10003;</span>
                     &nbsp;
                     Phone number verification

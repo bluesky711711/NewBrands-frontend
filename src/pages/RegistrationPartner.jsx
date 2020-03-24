@@ -308,10 +308,10 @@ class RegistrationPartner extends React.Component {
               <CustomItems method="Input" text="Full name *" id="full-name" value={this.state.fullname} required />
               <CustomItems method="Input" text="Brand name *" id="brand-name" value={this.state.brandname} required />
               <CustomItems method="Select" text="Country *" id="country" options={countries} value={this.state.country} onChange={this.selectCountry} required />
-              <CustomItems method="Email" text="E-Mail *" id="email" type="email" value={this.state.email} verified={this.state.email_verified} required />
+              <CustomItems method="Email" text="E-Mail *" id="email" type="email" value={this.state.email} verified={this.state.email_verified.toString()} required />
               <CustomItems method="Label" text="" title="hidden" id="type-find-label" label="How did you find out about us?" />
               <CustomItems method="Select" text="" title="hidden" id="type-find" options={find_types} value={this.state.findType} onChange={this.selectFindtype} />
-              <CustomItems method="PhoneNumber" text="Phone № *" id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} verified={this.state.phone_verified} required />
+              <CustomItems method="PhoneNumber" text="Phone № *" id="phone-number" value={this.state.phoneNumber} onChange={this.selectPhoneNumber} verified={this.state.phone_verified.toString()} required />
               <CustomItems method="Input" text="DUNS № (if company created)" id="duns" value={this.state.duns_number} type="number" />
               <CustomItems method="Input" text="Company founded in  *" id="company-date" value={this.state.company_date} type="number" required />
               <CustomItems method="Input" text="Type of company *" id="company-type" value={this.state.company_type} required />
