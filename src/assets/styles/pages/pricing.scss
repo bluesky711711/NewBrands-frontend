@@ -90,7 +90,7 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-      padding: 7.05em 0 2.9em 0;
+      padding: 7.05em 4em 4em 4em;
 
       .content-title {
         margin-bottom: 2.85em;
@@ -227,12 +227,12 @@
   .pricing-partners {
     font-size: 1.0rem;
     .page-container {
-      margin: 7.8em 3em 3em;
+      margin: 2em 3em 3em;
       padding-left: 2em;
       padding-right: 2em;      
             
       .content-banner {
-        padding: 6em 0 2em 0;
+        padding: 6em 3em 3em 3em;
         .content-title {
           margin-bottom: 4.5em;
         }
@@ -244,8 +244,10 @@
         }
       }
       .contact-banner {
+        font-size: 1em;
         .question {
           max-width: none;
+          padding-right: 0;
         }
       }
     }
@@ -272,7 +274,7 @@
         }
       }
       .content-banner {
-        padding: 4.5em 0 2.5em 0;
+        padding: 6em 3em 4em 3em;
         .content-title {
           margin-bottom: 3.5em;
         }
@@ -284,8 +286,10 @@
         }
       }
       .contact-banner {
+        font-size: 0.8em;
+
         flex-direction: column;
-        margin-top: 3.5em;
+        margin-top: 6.5em;
 
         .question {
           max-width: none;
@@ -311,7 +315,7 @@
       padding-right: 0.5em;
       
       .content-banner {
-        padding: 3.5em 0 1.5em 0;
+        padding: 6em 3em 4em 3em;
         .content-title {
           margin-bottom: 2em;
         }

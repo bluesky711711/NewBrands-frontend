@@ -1,6 +1,6 @@
 @import 'assets/styles/variables';
 
-$base-font-rate: 1.25;
+$base-font-rate: 1.1;
 $item-size: 14.54544em * $base-font-rate;
 $item-row-margin: 3.75em * $base-font-rate;
 $banner-margin: 1.5em * $base-font-rate;
@@ -34,7 +34,7 @@ $page-max-width: 2 * (($item-size + 2 * $item-row-margin) + $banner-margin + $pa
 
     .title-banner {
       display: flex;
-      font-size: 4.55em;
+      font-size: 3.64em;
       font-family: 'Gelion';
       font-style: normal;
       font-weight: 500;
@@ -140,10 +140,10 @@ $page-max-width: 2 * (($item-size + 2 * $item-row-margin) + $banner-margin + $pa
             width: 50%;
 
             .title {
-              font-size: 1.1em;
+              font-size: 1em;
               line-height: 1.1818em;
               color: $font-dark;
-              width: $item-size;
+              width: $item-size * 1.1;
               margin-left: auto;
               margin-right: auto;
             }
@@ -151,33 +151,33 @@ $page-max-width: 2 * (($item-size + 2 * $item-row-margin) + $banner-margin + $pa
             &.text {
 
               .title {
-                font-family: 'Georgia';
                 font-size: 0.7em;
+                font-family: 'Georgia';
                 line-height: 1em;
                 color: #000000b3;
-                max-width: $item-size;
+                width: $item-size * 1.4285;
               }
-              .header {
+              .inheader {
                 font-weight: 500;
                 font-size: 1.1em;
                 line-height: 1.4286em;
                 color: $font-dark;
-                max-width: $item-size;
+                width: $item-size;
                 margin-right: auto;
-                margin-left: $item-row-margin + $banner-margin / 2;
+                margin-left: auto;
                 strong {
                   font-weight: 300;
                 }
               }
-              .body {
+              .inbody {
                 font-weight: 300;
                 font-size: 0.9em;
                 line-height: 2.2222em;
                 color: black;
                 opacity: 0.5;
-                max-width: $item-size;
+                width: $item-size * 1.2222;
                 margin-right: auto;
-                margin-left: $item-row-margin + $banner-margin / 2;
+                margin-left: auto;
               }
             }
           }
@@ -390,6 +390,7 @@ $page-max-width: 2 * (($item-size + 2 * $item-row-margin) + $banner-margin + $pa
 
       .title-banner {
         font-size: 2.5em;
+        text-align: center;
       }
 
       .registration-banner {
@@ -408,6 +409,9 @@ $page-max-width: 2 * (($item-size + 2 * $item-row-margin) + $banner-margin + $pa
           }
 
           .inline {
+            flex-direction: column;
+            align-items: center;
+
             &.list {
               width: 100%;
               .inline-list {
@@ -426,6 +430,13 @@ $page-max-width: 2 * (($item-size + 2 * $item-row-margin) + $banner-margin + $pa
                   margin-left: 0;
                   margin-right: 0;
                 }
+              }
+            }
+
+            .inline-container {
+              width: 100%;
+              &.text {
+                width: 100%;
               }
             }
           }          

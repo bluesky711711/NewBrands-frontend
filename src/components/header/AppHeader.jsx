@@ -22,6 +22,9 @@ const menuItems = [
   ],
 ];
 
+const langMenu = ['en', 'fr'];
+const currencyMenu = ['€', '$'];
+
 class AppHeader extends React.Component {
   constructor(props) {
     super(props);
@@ -31,11 +34,14 @@ class AppHeader extends React.Component {
       isHomeExpanded: false,
       isManExpanded: false,
       menu_open: false,
+      curLangMenu: langMenu,
+      curCurrencyMenu: currencyMenu
     }
 
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.handleMenuOpen = this.handleMenuOpen.bind(this);
     this.handleLanguage = this.handleLanguage.bind(this);
+    this.handleCurrency = this.handleCurrency.bind(this);
   }
 
   componentDidMount() {
@@ -48,6 +54,29 @@ class AppHeader extends React.Component {
 
   handleLanguage(lang) {
     i18next.changeLanguage(lang);
+    let curLangMenu = [lang];
+    langMenu.map((lan) => {
+      if (lan !== lang) {
+        curLangMenu.push(lan);
+      }
+      return "";
+    });
+    this.setState({
+      curLangMenu
+    });
+  }
+
+  handleCurrency(currency) {
+    let curCurrencyMenu = [currency];
+    currencyMenu.map(cur => {
+      if (cur !== currency) {
+        curCurrencyMenu.push(cur);
+      }
+      return "";
+    });
+    this.setState({
+      curCurrencyMenu
+    });
   }
 
   handleMenuOpen() {
@@ -74,7 +103,7 @@ class AppHeader extends React.Component {
   render() {
     const { t } = this.props;
 
-    const { menu_open } = this.state;
+    const { menu_open, curLangMenu, curCurrencyMenu } = this.state;
     const isBlackHeader = this.props.type === 'black';
     const hrStyles = (isBlackHeader ? "header black" : "header white");
     
@@ -95,20 +124,35 @@ class AppHeader extends React.Component {
       );
     });
 
+    let langbar_title = <Link to="#" className="nb-link" onClick={()=> this.handleLanguage(curLangMenu[0])}> {curLangMenu[0]} </Link>;
+    let langbar_submenu = this.state.curLangMenu.map((lang, index) => {
+      if (index > 0) {
+        return <Link to="#" className="nb-link" onClick={() => this.handleLanguage(lang)}> {lang} </Link>
+      };
+      return <></>;
+    });
     let langbar = (
       <div className="col-xl-2 col-lg-4 col-md-3 language-bar collapse-menu">
-        <Link to="#" className="nb-link" onClick={()=> this.handleLanguage('en')}> En </Link>
+        {langbar_title}
         <div className="submenu">
-          <Link to="#" className="nb-link" onClick={() => this.handleLanguage('fr')}> Fr </Link>
+          {langbar_submenu}
         </div>
       </div>
     );
 
+    let currbar_title = <Link to="#" className="nb-link" onClick={()=> this.handleCurrency(curCurrencyMenu[0])}> {curCurrencyMenu[0]} </Link>;
+    let currbar_submenu = this.state.curCurrencyMenu.map((curr, index) => {
+      if (index > 0) {
+        return <Link to="#" className="nb-link" onClick={() => this.handleCurrency(curr)}> {curr} </Link>
+      };
+      return <></>;
+    });
+
     let currencybar = (
       <div className="col-2 currency-bar collapse-menu">
-        <Link to="#" className="nb-link"> &euro; </Link>
+        {currbar_title}
         <div className="submenu">
-          <Link to="#" className="nb-link"> $ </Link>
+          {currbar_submenu}
         </div>
       </div>
     );

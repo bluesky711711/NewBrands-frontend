@@ -95,8 +95,8 @@ export const AppFooter = props => {
               {t("Footer.Copyright")}
             </div>
           </div>
-          <div className="col-xl-6 col-lg-7 col-md-7 menu"> { menubar } </div>
-          <div className="col-xl-3 col-lg-1 col-md-1 mark"> <img src={logo_img} alt="New Brands Mark"/> </div>
+          <div className="col-xl-6 col-lg-6 col-md-7 menu"> { menubar } </div>
+          <div className="col-xl-3 col-lg-2 col-md-2 mark"> <img src={logo_img} alt="New Brands Mark"/> </div>
         </div>
       </div>
     );

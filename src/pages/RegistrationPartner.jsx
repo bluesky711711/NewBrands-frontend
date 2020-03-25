@@ -221,13 +221,14 @@ class RegistrationPartner extends React.Component {
             <CustomItems method="MuiltiTextField" 
               className="title"
               title="hidden"
+              rowtype="true"
               placeholder="Write informations here about this address"
               onChange={event => this.handleAddressInformation(event, id)}
             />
           </div>
           <div className="inline-container text">
-            <span className="header">{ this.state.addresses_info[id].address.name}</span>
-            <span className="body">{this.state.addresses_info[id].address.lat}, {this.state.addresses_info[id].address.lng}</span>
+            <span className="inheader">{ this.state.addresses_info[id].address.name}</span>
+            <span className="inbody">{this.state.addresses_info[id].address.lat}, {this.state.addresses_info[id].address.lng}</span>
           </div>
         </div>
       );
@@ -244,6 +245,7 @@ class RegistrationPartner extends React.Component {
             text=""
             title="hidden" 
             id={"list-item "+id} 
+            rowtype="true"
             placeholder={t("Register.WriteHere")+"..."}
             value={this.state.materials_content[id]}
             onChange={e => this.onChangeMeterial(e, id)}
@@ -278,6 +280,7 @@ class RegistrationPartner extends React.Component {
             text="" 
             title="hidden" 
             id={"list-item "+id+this.state.material_count+1} 
+            rowtype="true"
             placeholder={t("Register.WriteHere")+"..."}
             value={this.state.processes_content[id]}
             onChange={e => this.onChangeProcess(e, id)}

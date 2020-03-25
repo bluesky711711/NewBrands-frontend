@@ -113,11 +113,12 @@ const MultiTextField = withStyles({
       fontFamily: 'Georgia',
       fontStyle: 'normal',
       fontWeight: 'normal',
-      fontSize: '14px',
-      lineHeight: '20px',
+      fontSize: '1.21212em',
+      lineHeight: '1.42857em',
       color: 'rgba(0, 0, 0, 0.7)',
       width: "100%",
       height: "100%",
+      marginBottom: '0.7143em ',
     },
   },
 })(TextField);
@@ -285,7 +286,7 @@ export class CustomItems extends React.Component {
                       style={{
                         boxShadow: 'none',
                         fontFamily: 'Gelion',
-                        fontSize: '1.333em',
+                        fontSize: '1em',
                         lineHeight: '1.0196em',
                         color: '#333333',
                         width: '100%',

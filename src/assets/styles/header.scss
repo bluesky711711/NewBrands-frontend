@@ -121,12 +121,13 @@
     display: flex;
     padding: 0 1.25em;
     font-size: 1em;
+    text-transform: capitalize;
 
     .language-bar {
       margin-left: auto;
       margin-right: 0;
       padding: 0;
-      max-width: 1.2em;
+      max-width: 1.2em;     
 
       a {
         margin-left: 0;
@@ -228,15 +229,15 @@
 
 @media (max-width: 992px) {
   .header-container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
 @media (max-width: 767px) {
   .header-container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 }
 
